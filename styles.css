@@ -215,10 +215,37 @@ section h2 {
 }
 
 .project-card {
-    background: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    background: #fff;
+    border-radius: 0;
+    box-shadow: none;
+    overflow: visible;
+    padding: 2.5rem 1.2rem 2.5rem 1.2rem;
+    margin: 2rem 0;
+    border: 0;
+}
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    pointer-events: none;
+    z-index: 1;
+    /* Pixel-art border using box-shadow */
+    box-shadow:
+        0 0 0 4px #111,
+        4px 0 0 0 #111,
+        -4px 0 0 0 #111,
+        0 4px 0 0 #111,
+        0 -4px 0 0 #111,
+        8px 0 0 0 #111,
+        -8px 0 0 0 #111,
+        0 8px 0 0 #111,
+        0 -8px 0 0 #111;
+    border-radius: 0;
+}
+.project-card > * {
+    position: relative;
+    z-index: 2;
 }
 
 .project-image img {
@@ -523,5 +550,11 @@ footer {
     }
     .skill-divider {
         margin: 0 0.7rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .project-card {
+        padding: 1.2rem 0.5rem 1.2rem 0.5rem;
     }
 } 
