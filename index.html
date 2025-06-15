@@ -28,7 +28,7 @@
         <div class="hero-content">
             <h1>Hi, I'm Viridienne</h1>
             <h2>Unity Developer</h2>
-            <p>Creating immersive gaming experiences through code and creativity</p>
+            <p>Transforming gaming passion into a profession</p>
             <a href="#projects" class="cta-button">View My Work</a>
         </div>
     </section>
@@ -46,59 +46,140 @@
     <section id="experience" class="experience">
         <h2>Experience</h2>
         <div class="experience-list">
-            <div class="job">
-                <h3>Unity Developer</h3>
-                <h4>Amanotes &middot; Full-time</h4>
-                <p class="job-duration">Feb 2025 – Present &middot; 5 mos &middot; On-site</p>
-                <ul class="job-skills">
-                    <li>C#</li><li>Unity</li><li>+3 skills</li>
-                </ul>
-            </div>
-            <div class="job">
-                <h3>Unity Developer</h3>
-                <h4>PlayAd &middot; Full-time</h4>
-                <p class="job-duration">Jul 2024 – Feb 2025 &middot; 8 mos &middot; Ho Chi Minh City, Vietnam &middot; On-site</p>
-                <ul>
-                    <li>Intergrade Company's Ads SDK, Firebase etc.</li>
-                    <li>Customize FX to be suitable for the game</li>
-                    <li>Create a friendly, maintainable framework</li>
-                    <li>Implement UI</li>
-                </ul>
-                <p>Lately, I have been involved in maintaining and operating the company's high-traffic projects, with responsibilities including:</p>
-                <ul>
-                    <li>Add new game content based on the existing source code from other developers</li>
-                    <li>Resolve any remaining bugs left by other developers in the project</li>
-                </ul>
-                <ul class="job-skills">
-                    <li>C#</li><li>Unity</li><li>+1 skill</li>
-                </ul>
-            </div>
-            <div class="job">
-                <h3>Unity Developer (Project's Dev team Sub Leader)</h3>
-                <h4>Topebox &middot; Full-time</h4>
-                <p class="job-duration">Nov 2022 – Jun 2024 &middot; 1 yr 8 mos &middot; Ho Chi Minh City, Vietnam &middot; On-site</p>
-                <ul>
-                    <li>Handle integrating server APIs</li>
-                    <li>Ensure team's workflow, assign tasks for other members when needed</li>
-                    <li>Developing the game's core mechanics</li>
-                    <li>Help improving member's code when needed</li>
-                    <li>Integrate UI/UX from artist design into the game</li>
-                </ul>
-                <div class="project-highlight">
-                    <strong>Mimiland - Game Xã Hội - Ứng dụng trên Google Play</strong><br>
-                    The project that I dedicated most of my time to at Topebox
+            <!-- Amanotes -->
+            <div class="job-card">
+                <div class="job-header">
+                    <img class="company-logo" src="https://media.licdn.com/dms/image/v2/D560BAQHHw2lWzjhwSQ/company-logo_200_200/B56ZUiqDivGUAI-/0/1740043205343/amanotes_logo?e=1755734400&v=beta&t=tJX31l8Y5GFw6cYp4l6dfrB8TsJA_F3dv3BX8BZYLG4" alt="Amanotes Logo">
+                    <div>
+                        <h3>Unity Developer</h3>
+                        <h4>Amanotes &middot; Full-time</h4>
+                        <p class="job-duration">Feb 2025 – Present &middot; 5 mos &middot; On-site</p>
+                    </div>
                 </div>
-                <ul class="job-skills">
-                    <li>C#</li><li>Unity</li><li>+1 skill</li>
-                </ul>
+                <div class="job-skills">
+                    <button class="skills-toggle" onclick="toggleSkills(this)">Skills</button>
+                </div>
+                <div class="skills-list" style="display:none;">
+                    <div class="skill-row">C#</div>
+                    <div class="skill-divider"></div>
+                    <div class="skill-row">Unity</div>
+                    <div class="skill-divider"></div>
+                    <div class="skill-row">Generative AI</div>
+                    <div class="skill-divider"></div>
+                    <div class="skill-row">Gitlab</div>
+                    <div class="skill-divider"></div>
+                    <div class="skill-row">Fork</div>
+                </div>
             </div>
-            <div class="job">
-                <h3>Unity Developer</h3>
-                <h4>Latte Games &middot; Part-time</h4>
-                <p class="job-duration">Jul 2022 – Oct 2022 &middot; 4 mos &middot; Ho Chi Minh City, Vietnam &middot; On-site</p>
-                <ul class="job-skills">
-                    <li>C#</li><li>Unity</li><li>+1 skill</li>
-                </ul>
+            <!-- PlayAd -->
+            <div class="job-card">
+                <div class="job-header">
+                    <img class="company-logo" src="https://play-lh.googleusercontent.com/GRj3HvpLB3WZIJIYCIEvWRHVPxRIH0gZEwLGdU9ijAFY8rHtXr9HTGWzkOtSiJHT7hGe=w480-h960-rw" alt="PlayAd Logo">
+                    <div>
+                        <h3>Unity Developer</h3>
+                        <h4>PlayAd &middot; Full-time</h4>
+                        <p class="job-duration">Jul 2024 – Feb 2025 &middot; 8 mos &middot; Ho Chi Minh City, Vietnam &middot; On-site</p>
+                    </div>
+                </div>
+                <div class="job-skills">
+                    <button class="skills-toggle" onclick="toggleSkills(this)">Skills</button>
+                </div>
+                <div class="skills-list" style="display:none;">
+                    <div class="skill-row">C#</div>
+                    <div class="skill-divider"></div>
+                    <div class="skill-row">Unity</div>
+                    <div class="skill-divider"></div>
+                    <div class="skill-row">Firebase</div>
+                    <div class="skill-divider"></div>
+                    <div class="skill-row">Ads SDK</div>
+                    <div class="skill-divider"></div>
+                    <div class="skill-row">UI/UX</div>
+                </div>
+                <div class="job-description">
+                    <p>At PlayAd, each project only has one developer, one artist, and a designer, which means I had to handle almost every aspect, for example:</p>
+                    <ul class="job-bullets">
+                        <li>Intergrade Company's Ads SDK, Firebase etc...</li>
+                        <li>Customize FX to be suitable for the game</li>
+                        <li>Create a friendly, maintainable framework</li>
+                        <li>Implement UI</li>
+                    </ul>
+                    <p>Lately, I have been involved in maintaining and operating the company's high-traffic projects, with my responsibilities including:</p>
+                    <ul class="job-bullets">
+                        <li>Add new game content based on the existing source code from other developers.</li>
+                        <li>Resolve any remaining bugs left by other developers in the project.</li>
+                    </ul>
+                </div>
+                <div class="job-skills">
+                    <span>C#</span><span>Unity</span><span>+1 skill</span>
+                </div>
+                <div class="job-projects">
+                    <img class="project-thumb" src="https://play-lh.googleusercontent.com/w0s401oHZno1m29gsm49Ieuj5RFyz5D5j4MqHfpzQDLlxS9RxosGk_8MpnU9-SFYkrg=w480-h960-rw" alt="Heroic Defense">
+                    <img class="project-thumb" src="https://play-lh.googleusercontent.com/1weDP-ODyx-k_802dQ04RkgNw1-gJQtUluZ3DMZ1_X6-1XS5L1Gz1gq-2QzYVFGxSsMO=w480-h960-rw" alt="Ball Destroy">
+                </div>
+            </div>
+            <!-- Topebox -->
+            <div class="job-card">
+                <div class="job-header">
+                    <img class="company-logo" src="https://media.licdn.com/dms/image/v2/D560BAQE_l_feE_yO9A/company-logo_200_200/company-logo_200_200/0/1721212213701/topebox_logo?e=1755734400&v=beta&t=cmi4nZT_vYmSfXrqV4qGxFhYmJJ0orPpom9hAESbpIg" alt="Topebox Logo">
+                    <div>
+                        <h3>Unity Developer (Project's Dev team Sub Leader)</h3>
+                        <h4>Topebox &middot; Full-time</h4>
+                        <p class="job-duration">Nov 2022 – Jun 2024 &middot; 1 yr 8 mos &middot; Ho Chi Minh City, Vietnam &middot; On-site</p>
+                    </div>
+                </div>
+                <div class="job-skills">
+                    <button class="skills-toggle" onclick="toggleSkills(this)">Skills</button>
+                </div>
+                <div class="skills-list" style="display:none;">
+                    <div class="skill-row">C#</div>
+                    <div class="skill-divider"></div>
+                    <div class="skill-row">Unity</div>
+                    <div class="skill-divider"></div>
+                    <div class="skill-row">Server API Integration</div>
+                    <div class="skill-divider"></div>
+                    <div class="skill-row">Team Leadership</div>
+                </div>
+                <div class="job-description">
+                    <ul class="job-bullets">
+                        <li>Handle integrating server APIs</li>
+                        <li>Ensure team's workflow, assign tasks for other members when needed</li>
+                        <li>Developing the game's core mechanics</li>
+                        <li>Help improving member's code when needed</li>
+                        <li>Integrate UI/UX from artist design into the game</li>
+                    </ul>
+                    <div class="project-highlight">
+                        <img class="project-thumb" src="https://play-lh.googleusercontent.com/9WjvFonSvANwCmL2kYfrS7BICaMdArMtH67-YJJ03WyyLNbopOAPgBGD5pB9yB9zAq4=w480-h960-rw" alt="Mimiland" style="width:48px;height:48px;vertical-align:middle;margin-right:12px;border-radius:8px;">
+                        <span style="font-weight:bold;font-size:1.1rem;vertical-align:middle;">Mimiland - Game Xã Hội - Ứng dụng trên Google Play</span><br>
+                        <span style="font-size:0.98rem;vertical-align:middle;">The project that I dedicated most of my time to at Topebox</span>
+                    </div>
+                </div>
+                <div class="job-skills">
+                    <span>C#</span><span>Unity</span><span>+1 skill</span>
+                </div>
+            </div>
+            <!-- Latte Games -->
+            <div class="job-card">
+                <div class="job-header">
+                    <img class="company-logo" src="https://media.licdn.com/dms/image/v2/C510BAQEIeIXHkCHbvg/company-logo_200_200/company-logo_200_200/0/1630598496640?e=1755734400&v=beta&t=wzwwn3SIPHQ72Fuwr71ygeMuXDBnPBwziQRviJDrb8U" alt="Latte Games Logo">
+                    <div>
+                        <h3>Unity Developer</h3>
+                        <h4>Latte Games &middot; Part-time</h4>
+                        <p class="job-duration">Jul 2022 – Oct 2022 &middot; 4 mos &middot; Ho Chi Minh City, Vietnam &middot; On-site</p>
+                    </div>
+                </div>
+                <div class="job-skills">
+                    <button class="skills-toggle" onclick="toggleSkills(this)">Skills</button>
+                </div>
+                <div class="skills-list" style="display:none;">
+                    <div class="skill-row">C#</div>
+                    <div class="skill-divider"></div>
+                    <div class="skill-row">Unity</div>
+                    <div class="skill-divider"></div>
+                    <div class="skill-row">Rapid Prototyping</div>
+                </div>
+                <div class="job-skills">
+                    <span>C#</span><span>Unity</span><span>+1 skill</span>
+                </div>
             </div>
         </div>
     </section>
@@ -152,7 +233,7 @@
             <!-- 3D Project -->
             <div class="project-card">
                 <div class="project-image">
-                    <img src="https://i.ytimg.com/vi_webp/utRvn2S_-P8/maxresdefault.webp" alt="The Swordman">
+                    <img src="https://i9.ytimg.com/vi_webp/utRvn2S_-P8/mq1.webp?sqp=COCju8IG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGMgZShTMA8=&rs=AOn4CLA_T21oE8i1SkijrYxUOyHqNLrkXA" alt="The Swordman">
                 </div>
                 <div class="project-info">
                     <h3>The Swordman</h3>
@@ -287,5 +368,17 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+    function toggleSkills(btn) {
+        const skillsList = btn.parentElement.nextElementSibling;
+        if (skillsList.style.display === 'none' || skillsList.style.display === '') {
+            skillsList.style.display = 'block';
+            btn.textContent = 'Hide Skills';
+        } else {
+            skillsList.style.display = 'none';
+            btn.textContent = 'Skills';
+        }
+    }
+    </script>
 </body>
 </html>
