@@ -222,25 +222,27 @@ section h2 {
     overflow: visible;
     padding: 2.5rem 1.2rem 2.5rem 1.2rem;
     margin: 2rem 0;
-    border: 0;
+    border: 6px solid var(--primary-color);
 }
-.project-card::before {
+.project-card::before,
+.project-card::after {
     content: '';
     position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    pointer-events: none;
-    z-index: 1;
-    /* Pixel-art border using box-shadow */
-    box-shadow:
-        0 0 0 4px #111,
-        4px 0 0 0 #111,
-        -4px 0 0 0 #111,
-        0 4px 0 0 #111,
-        0 -4px 0 0 #111,
-        8px 0 0 0 #111,
-        -8px 0 0 0 #111,
-        0 8px 0 0 #111,
-        0 -8px 0 0 #111;
+    width: 18px;
+    height: 18px;
+    background: #fff;
+    z-index: 2;
+}
+.project-card::before {
+    top: -6px; left: -6px;
+    border-left: 6px solid var(--primary-color);
+    border-top: 6px solid var(--primary-color);
+    border-radius: 0;
+}
+.project-card::after {
+    bottom: -6px; right: -6px;
+    border-right: 6px solid var(--primary-color);
+    border-bottom: 6px solid var(--primary-color);
     border-radius: 0;
 }
 .project-card > * {
@@ -556,5 +558,21 @@ footer {
 @media (max-width: 900px) {
     .project-card {
         padding: 1.2rem 0.5rem 1.2rem 0.5rem;
+        border-width: 4px;
+    }
+    .project-card::before,
+    .project-card::after {
+        width: 12px;
+        height: 12px;
+    }
+    .project-card::before {
+        top: -4px; left: -4px;
+        border-left-width: 4px;
+        border-top-width: 4px;
+    }
+    .project-card::after {
+        bottom: -4px; right: -4px;
+        border-right-width: 4px;
+        border-bottom-width: 4px;
     }
 } 
