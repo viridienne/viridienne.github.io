@@ -125,6 +125,32 @@ section {
     padding: 5rem 1rem;
 }
 
+/* About Section */
+.about {
+    background-image: url('ranni poster.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.about * {
+    position: relative;
+    z-index: 2;
+}
+
 section h2 {
     text-align: center;
     font-size: 1.8rem;
@@ -585,4 +611,4 @@ footer {
         width: 4px;
         top: 12px; bottom: 12px;
     }
-} 
+}
