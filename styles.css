@@ -7,12 +7,13 @@
 
 /* Base styles */
 :root {
-    --primary-color: #6C63FF;
+    --primary-color: #FFD700;
     --secondary-color: #4CAF50;
     --background-color: #1a1a1a;
     --text-color: #ffffff;
     --card-background: #2a2a2a;
     --pixel-font: 'Press Start 2P', 'Courier New', monospace;
+    --body-font: 'Inter', system-ui, sans-serif;
 }
 
 body {
@@ -22,6 +23,48 @@ body {
     padding: 0;
     background-color: var(--background-color);
     color: var(--text-color);
+}
+
+/* Body font for all prose — headings stay pixel font */
+.project-info p,
+.about-content .about-text p,
+.contact-item,
+.contact-item a,
+.skill-desc,
+.job-description,
+.job-description p,
+.job-description li,
+.job-duration,
+.project-highlight span,
+footer,
+footer p {
+    font-family: var(--body-font);
+}
+
+.project-info p {
+    font-size: 0.92rem;
+    line-height: 1.75;
+}
+
+.about-content .about-text p {
+    font-size: 1.05rem;
+    line-height: 1.85;
+}
+
+.job-description p,
+.job-description li {
+    font-size: 0.92rem;
+    line-height: 1.7;
+}
+
+.job-duration {
+    font-size: 0.85rem;
+    color: #aaa;
+}
+
+.contact-item,
+.contact-item a {
+    font-size: 0.9rem;
 }
 
 /* Navigation */
@@ -111,7 +154,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #ADD8E6;
+    color: #FFD700;
     transform: translateY(-1px);
 }
 
@@ -233,7 +276,7 @@ section {
     text-align: center;
     font-size: 1.8rem;
     margin-bottom: 2rem;
-    color: #ADD8E6;
+    color: #FFD700;
     text-transform: uppercase;
     letter-spacing: 2px;
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.8);
@@ -248,7 +291,7 @@ section {
     padding: 2rem;
     border-radius: 15px;
     backdrop-filter: blur(10px);
-    border: 2px solid rgba(173, 216, 230, 0.3);
+    border: 2px solid rgba(255, 215, 0, 0.25);
 }
 
 .about-content .about-text p {
@@ -268,16 +311,22 @@ section {
     text-align: center;
     font-size: 1.8rem;
     margin-bottom: 2rem;
-    color: #6C63FF;
+    color: #FFD700;
     text-transform: uppercase;
     letter-spacing: 2px;
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.8);
 }
 
 /* Skills & Technologies Section */
-.skills-grid, .projects-grid {
+.skills-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin: 2.5rem 0 0 0;
+}
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
     margin: 2.5rem 0 0 0;
 }
@@ -295,20 +344,20 @@ section {
     min-height: 220px;
     transition: transform 0.2s, box-shadow 0.2s;
     position: relative;
-    border: 2px solid rgba(108, 99, 255, 0.2);
+    border: 2px solid rgba(255, 215, 0, 0.15);
     overflow: hidden;
     margin: 0;
 }
 .skill-card:hover {
     transform: translateY(-6px) scale(1.03);
-    box-shadow: 0 12px 32px rgba(108, 99, 255, 0.4);
-    border-color: rgba(108, 99, 255, 0.6);
+    box-shadow: 0 12px 32px rgba(255, 215, 0, 0.3);
+    border-color: rgba(255, 215, 0, 0.5);
 }
 .skill-card i, .skill-card svg {
     font-size: 3rem;
-    color: #6C63FF;
+    color: #FFD700;
     margin-bottom: 1.5rem;
-    text-shadow: 0 0 10px rgba(108, 99, 255, 0.5);
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
 }
 .skill-card h3 {
     font-family: var(--pixel-font);
@@ -325,12 +374,34 @@ section {
     text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.8);
 }
 .skill-desc {
-    font-family: var(--pixel-font);
-    font-size: 0.95rem;
-    color: #ADD8E6;
+    font-family: var(--body-font);
+    font-size: 0.82rem;
+    color: #aaa;
     margin-top: 0.5rem;
     text-align: center;
-    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.8);
+}
+
+.submit-button {
+    padding: 0.85rem 2rem;
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: var(--pixel-font);
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+    width: 100%;
+}
+
+.submit-button:hover {
+    background: linear-gradient(135deg, #FFA500, #FF8C00);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
 }
 @media (max-width: 900px) {
     .skills-grid, .projects-grid {
@@ -357,7 +428,7 @@ section {
     text-align: center;
     font-size: 1.8rem;
     margin-bottom: 2rem;
-    color: #6C63FF;
+    color: #FFD700;
     text-transform: uppercase;
     letter-spacing: 2px;
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.8);
@@ -371,16 +442,16 @@ section {
     box-shadow: 0 6px 24px rgba(0,0,0,0.3);
     overflow: hidden;
     padding: 0;
-    margin: 2rem 0;
-    border: 2px solid rgba(108, 99, 255, 0.2);
+    margin: 0;
+    border: 2px solid rgba(255, 215, 0, 0.15);
     min-height: 520px;
     transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
 }
 
 .project-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 12px 32px rgba(108, 99, 255, 0.4);
-    border-color: rgba(108, 99, 255, 0.6);
+    box-shadow: 0 12px 32px rgba(255, 215, 0, 0.3);
+    border-color: rgba(255, 215, 0, 0.5);
 }
 
 .project-card .pixel-corner {
@@ -416,29 +487,28 @@ section {
 
 .project-tags span {
     display: inline-block;
-    padding: 0.4rem 0.8rem;
-    background: rgba(108, 99, 255, 0.2);
-    border: 1px solid rgba(108, 99, 255, 0.4);
+    padding: 0.3rem 0.7rem;
+    background: rgba(255, 215, 0, 0.08);
+    border: 1px solid rgba(255, 215, 0, 0.3);
     border-radius: 15px;
-    margin-right: 0.5rem;
-    margin-bottom: 0.5rem;
-    font-size: 0.7rem;
-    color: #ADD8E6;
-    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.8);
+    margin-right: 0.4rem;
+    margin-bottom: 0.4rem;
+    font-family: var(--body-font);
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #e0e0e0;
 }
 
-/* Project Card Description Fix */
+/* Project Card Description */
 .project-info p {
-    color: #CCC;
-    font-family: var(--pixel-font);
-    font-size: 1rem;
-    margin: 1.2rem 0 1.2rem 0;
-    line-height: 1.6;
+    color: #bbb;
+    font-family: var(--body-font);
+    font-size: 0.9rem;
+    margin: 0.8rem 0 1rem 0;
+    line-height: 1.7;
     background: none;
     padding: 0;
-    border-radius: 0;
-    font-weight: normal;
-    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.8);
+    font-weight: 400;
 }
 
 /* Experience Section - Dark Theme */
@@ -451,7 +521,7 @@ section {
     text-align: center;
     font-size: 1.8rem;
     margin-bottom: 2rem;
-    color: #6C63FF;
+    color: #FFD700;
     text-transform: uppercase;
     letter-spacing: 2px;
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.8);
@@ -467,7 +537,7 @@ section {
     text-align: center;
     font-size: 1.8rem;
     margin-bottom: 2rem;
-    color: #6C63FF;
+    color: #FFD700;
     text-transform: uppercase;
     letter-spacing: 2px;
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.8);
@@ -489,7 +559,7 @@ section {
     background: var(--card-background);
     padding: 2rem;
     border-radius: 15px;
-    border: 2px solid rgba(108, 99, 255, 0.2);
+    border: 2px solid rgba(255, 215, 0, 0.15);
     box-shadow: 0 6px 24px rgba(0,0,0,0.3);
 }
 
@@ -504,8 +574,8 @@ section {
 
 .contact-item i {
     font-size: 1.5rem;
-    color: #6C63FF;
-    text-shadow: 0 0 10px rgba(108, 99, 255, 0.5);
+    color: #FFD700;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
 }
 
 .contact-form {
@@ -515,14 +585,14 @@ section {
     background: var(--card-background);
     padding: 2rem;
     border-radius: 15px;
-    border: 2px solid rgba(108, 99, 255, 0.2);
+    border: 2px solid rgba(255, 215, 0, 0.15);
     box-shadow: 0 6px 24px rgba(0,0,0,0.3);
 }
 
 .contact-form input,
 .contact-form textarea {
     padding: 1rem;
-    border: 2px solid rgba(108, 99, 255, 0.2);
+    border: 2px solid rgba(255, 215, 0, 0.15);
     border-radius: 8px;
     font-family: var(--pixel-font);
     font-size: 0.9rem;
@@ -534,8 +604,8 @@ section {
 .contact-form input:focus,
 .contact-form textarea:focus {
     outline: none;
-    border-color: rgba(108, 99, 255, 0.6);
-    box-shadow: 0 0 10px rgba(108, 99, 255, 0.3);
+    border-color: rgba(255, 215, 0, 0.5);
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.25);
 }
 
 .contact-form input::placeholder,
@@ -555,7 +625,7 @@ footer {
     background: var(--card-background);
     color: #E6E6FA;
     font-size: 0.8rem;
-    border-top: 2px solid rgba(108, 99, 255, 0.2);
+    border-top: 2px solid rgba(255, 215, 0, 0.15);
     text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.8);
 }
 
@@ -629,11 +699,55 @@ footer {
     z-index: 2;
 }
 
+/* Job card header layout */
+.job-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.company-logo {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    object-fit: contain;
+    flex-shrink: 0;
+    background: #fff;
+    padding: 2px;
+}
+
+.job-header h3 {
+    font-size: 0.85rem;
+    color: #FFD700;
+    margin-bottom: 0.25rem;
+}
+
+.job-header h4 {
+    font-size: 0.75rem;
+    color: #e0e0e0;
+    font-weight: normal;
+    margin-bottom: 0.25rem;
+}
+
+.job-bullets {
+    list-style: disc;
+    padding-left: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+.project-thumb {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-right: 0.5rem;
+}
+
 /* Expandable Skills Section */
 .skills-toggle {
     background: none;
     border: none;
-    color: #ADD8E6;
+    color: #FFD700;
     font-family: var(--pixel-font);
     font-size: 0.9rem;
     cursor: pointer;
@@ -644,7 +758,7 @@ footer {
     text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.8);
 }
 .skills-toggle:hover {
-    color: #87CEEB;
+    color: #FFA500;
 }
 .skills-list {
     background: #232323;
@@ -668,66 +782,27 @@ footer {
     margin: 0 1.5rem;
 }
 
-/* Project Link Button - New Styles */
+/* Project Link Button */
 .project-link {
-    display: inline-block;
-    padding: 1rem 2rem;
-    background: linear-gradient(135deg, #6C63FF, #4CAF50);
-    color: white;
+    display: block;
+    padding: 0.55rem 1rem;
+    background: transparent;
+    color: #FFD700;
     text-decoration: none;
-    border-radius: 12px;
-    transition: all 0.3s ease;
-    font-weight: bold;
-    font-family: var(--pixel-font);
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border: 3px solid transparent;
-    background-clip: padding-box;
-    position: relative;
-    box-shadow: 0 4px 15px rgba(108, 99, 255, 0.3);
-    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
-}
-
-.project-link::before {
-    content: '';
-    position: absolute;
-    top: -3px;
-    left: -3px;
-    right: -3px;
-    bottom: -3px;
-    background: linear-gradient(135deg, #FFD700, #FF6B6B, #4ECDC4, #45B7D1);
-    border-radius: 15px;
-    z-index: -1;
-    animation: gradient-border 3s ease infinite;
-}
-
-@keyframes gradient-border {
-    0% {
-        background: linear-gradient(135deg, #FFD700, #FF6B6B, #4ECDC4, #45B7D1);
-    }
-    25% {
-        background: linear-gradient(135deg, #FF6B6B, #4ECDC4, #45B7D1, #FFD700);
-    }
-    50% {
-        background: linear-gradient(135deg, #4ECDC4, #45B7D1, #FFD700, #FF6B6B);
-    }
-    75% {
-        background: linear-gradient(135deg, #45B7D1, #FFD700, #FF6B6B, #4ECDC4);
-    }
-    100% {
-        background: linear-gradient(135deg, #FFD700, #FF6B6B, #4ECDC4, #45B7D1);
-    }
+    border-radius: 6px;
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+    font-family: var(--body-font);
+    font-weight: 600;
+    font-size: 0.85rem;
+    border: 1.5px solid rgba(255, 215, 0, 0.4);
+    text-align: center;
+    margin-top: 0.5rem;
 }
 
 .project-link:hover {
-    background: linear-gradient(135deg, #5A52D5, #45A049);
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 8px 25px rgba(108, 99, 255, 0.5);
-}
-
-.project-link:hover::before {
-    animation-duration: 1s;
+    background: rgba(255, 215, 0, 0.1);
+    border-color: #FFD700;
+    transform: translateY(-1px);
 }
 
 /* Responsive Design */
