@@ -6,541 +6,512 @@
     <title>Viridienne - Unity Developer Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
+
+    <!-- Navigation -->
+    <header id="navbar">
         <nav>
-            <div class="logo">Viridienne</div>
+            <div class="logo">
+                <span class="logo-text">Viridienne</span>
+                <span class="logo-dot"></span>
+            </div>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <a href="https://viridienne.itch.io/" class="nav-gamepad" target="_blank" aria-label="itch.io">
+                <i class="fas fa-gamepad"></i>
+            </a>
         </nav>
     </header>
 
+    <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Hi, I'm Viridienne</h1>
-            <h2>Unity Developer</h2>
-            <p>Transforming gaming passion into a profession</p>
-            <a href="#projects" class="cta-button">View My Work</a>
+        <div class="hero-particles">
+            <span class="particle"></span>
+            <span class="particle"></span>
+            <span class="particle"></span>
+            <span class="particle"></span>
+            <span class="particle"></span>
+            <span class="particle"></span>
+            <span class="particle"></span>
+        </div>
+        <div class="hero-inner">
+            <div class="hero-content">
+                <p class="hero-label"><span class="hero-dot-inline">●</span> UNITY DEVELOPER</p>
+                <h1>Hi, I'm Viridienne</h1>
+                <h2>Unity Developer</h2>
+                <p class="hero-tagline">Transforming gaming passion into a profession</p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn-primary">View My Work →</a>
+                    <a href="#about" class="btn-secondary">About Me</a>
+                </div>
+                <div class="hero-socials">
+                    <a href="https://github.com/viridienne" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/hoanganh0245" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="mailto:hoanganh.tang0202@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
         </div>
     </section>
 
+    <!-- About Section -->
     <section id="about" class="about">
-        <h2>About Me</h2>
-        <div class="about-content">
-            <div class="about-text">
-                <p>I make games that click. 2D or 3D, mobile or PC — if it moves, glows, or explodes in Unity, I've probably built it. I focus on tight game feel, polished interactions, and systems that scale.</p>
+        <div class="section-inner about-inner">
+            <div class="about-left reveal">
+                <blockquote class="about-quote">"I make games that click."</blockquote>
+                <p class="about-body">2D or 3D, mobile or PC — if it moves, glows, or explodes in Unity, I've probably built it. I focus on tight game feel, polished interactions, and systems that scale.</p>
+            </div>
+            <div class="about-right">
+                <div class="stat-box reveal-child">
+                    <span class="stat-number">3+</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat-box reveal-child">
+                    <span class="stat-number">10+</span>
+                    <span class="stat-label">Shipped Titles</span>
+                </div>
+                <div class="stat-box reveal-child">
+                    <span class="stat-number">4</span>
+                    <span class="stat-label">Companies</span>
+                </div>
+                <div class="stat-box reveal-child">
+                    <span class="stat-number">∞</span>
+                    <span class="stat-label">Game Dev Passion</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="section-inner">
+            <h2 class="section-heading reveal">SKILLS &amp; TECHNOLOGIES</h2>
+            <div class="skills-grid">
+                <div class="skill-category-card reveal-child">
+                    <i class="fas fa-gamepad skill-cat-icon"></i>
+                    <h3>Gameplay</h3>
+                    <ul>
+                        <li>Systems &amp; mechanics design</li>
+                        <li>Combat &amp; puzzle systems</li>
+                        <li>Game feel &amp; juice</li>
+                        <li>Rapid prototyping</li>
+                    </ul>
+                </div>
+                <div class="skill-category-card reveal-child">
+                    <i class="fas fa-code skill-cat-icon"></i>
+                    <h3>Engine &amp; Code</h3>
+                    <ul>
+                        <li>Unity (2D / 3D / Mobile / PC)</li>
+                        <li>C# · OOP · Design patterns</li>
+                        <li>DOTS · Shader Graph</li>
+                        <li>Cinemachine · Animation</li>
+                    </ul>
+                </div>
+                <div class="skill-category-card reveal-child">
+                    <i class="fas fa-wand-magic-sparkles skill-cat-icon"></i>
+                    <h3>Pipeline &amp; Tools</h3>
+                    <ul>
+                        <li>MCP · Claude Code · Cursor</li>
+                        <li>AI-driven dev workflows</li>
+                        <li>GitLab · GitHub · Fork</li>
+                        <li>Prompt engineering</li>
+                    </ul>
+                </div>
+                <div class="skill-category-card reveal-child">
+                    <i class="fas fa-mobile-alt skill-cat-icon"></i>
+                    <h3>Platform &amp; SDK</h3>
+                    <ul>
+                        <li>Firebase · Analytics · Crashlytics</li>
+                        <li>Ads SDK · IAP integration</li>
+                        <li>Mobile (iOS &amp; Android)</li>
+                        <li>Balancy · Remote Config</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="section-inner">
+            <h2 class="section-heading reveal">FEATURED PROJECTS</h2>
+            <div class="projects-grid">
+
+                <!-- The Wanderer -->
+                <div class="project-card reveal-child">
+                    <div class="project-bg" style="background-image: url('https://img.itch.zone/aW1hZ2UvMTQ5OTIzNC84NzM4ODExLnBuZw==/original/OMB4d0.png')"></div>
+                    <div class="project-overlay"></div>
+                    <a href="https://viridienne.itch.io/the-wanderer" class="project-ext-link" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                    <div class="project-bottom">
+                        <h3>The Wanderer</h3>
+                        <div class="project-tags">
+                            <span>Unity</span><span>2D</span><span>Platformer</span><span>Action</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://viridienne.itch.io/the-wanderer" target="_blank">Play on itch.io</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- The Swordman -->
+                <div class="project-card reveal-child">
+                    <div class="project-bg" style="background-image: url('the swordman.png')"></div>
+                    <div class="project-overlay"></div>
+                    <a href="https://youtu.be/utRvn2S_-P8" class="project-ext-link" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                    <div class="project-bottom">
+                        <h3>The Swordman</h3>
+                        <div class="project-tags">
+                            <span>Unity</span><span>3D</span><span>Action</span><span>Combat</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://youtu.be/utRvn2S_-P8" target="_blank">Watch Gameplay Video</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mimiland -->
+                <div class="project-card reveal-child">
+                    <div class="project-bg" style="background-image: url('https://play-lh.googleusercontent.com/9WjvFonSvANwCmL2kYfrS7BICaMdArMtH67-YJJ03WyyLNbopOAPgBGD5pB9yB9zAq4=w480-h960-rw')"></div>
+                    <div class="project-overlay"></div>
+                    <a href="https://play.google.com/store/apps/details?id=com.games.city.mimiland&hl=vi" class="project-ext-link" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                    <div class="project-bottom">
+                        <h3>Mimiland</h3>
+                        <div class="project-tags">
+                            <span>Unity</span><span>C#</span><span>Mobile</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://play.google.com/store/apps/details?id=com.games.city.mimiland&hl=vi" target="_blank">Google Play</a>
+                            <a href="https://apps.apple.com/vn/app/mimiland/id1660327908" target="_blank">App Store</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Planet Extinction -->
+                <div class="project-card reveal-child">
+                    <div class="project-bg" style="background-image: url('https://play-lh.googleusercontent.com/GRj3HvpLB3WZIJIYCIEvWRHVPxRIH0gZEwLGdU9ijAFY8rHtXr9HTGWzkOtSiJHT7hGe=w480-h960-rw')"></div>
+                    <div class="project-overlay"></div>
+                    <a href="https://play.google.com/store/apps/details?id=com.pex.planet.extinction&hl=en" class="project-ext-link" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                    <div class="project-bottom">
+                        <h3>Planet Extinction</h3>
+                        <div class="project-tags">
+                            <span>Unity</span><span>Physics</span><span>Mobile</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://play.google.com/store/apps/details?id=com.pex.planet.extinction&hl=en" target="_blank">Google Play</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ball Destroy -->
+                <div class="project-card reveal-child">
+                    <div class="project-bg" style="background-image: url('https://play-lh.googleusercontent.com/1weDP-ODyx-k_802dQ04RkgNw1-gJQtUluZ3DMZ1_X6-1XS5L1Gz1gq-2QzYVFGxSsMO=w480-h960-rw')"></div>
+                    <div class="project-overlay"></div>
+                    <a href="https://play.google.com/store/apps/details?id=game.bb.ball.blast&hl=en" class="project-ext-link" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                    <div class="project-bottom">
+                        <h3>Ball Destroy</h3>
+                        <div class="project-tags">
+                            <span>Unity</span><span>Arcade</span><span>Mobile</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://play.google.com/store/apps/details?id=game.bb.ball.blast&hl=en" target="_blank">Google Play</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Heroic Defense -->
+                <div class="project-card reveal-child">
+                    <div class="project-bg" style="background-image: url('https://play-lh.googleusercontent.com/w0s401oHZno1m29gsm49Ieuj5RFyz5D5j4MqHfpzQDLlxS9RxosGk_8MpnU9-SFYkrg=w480-h960-rw')"></div>
+                    <div class="project-overlay"></div>
+                    <a href="https://play.google.com/store/apps/details?id=com.hd.heroic.defense&hl=en" class="project-ext-link" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                    <div class="project-bottom">
+                        <h3>Heroic Defense</h3>
+                        <div class="project-tags">
+                            <span>Unity</span><span>Tower Defense</span><span>Mobile</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://play.google.com/store/apps/details?id=com.hd.heroic.defense&hl=en" target="_blank">Google Play</a>
+                            <a href="https://apps.apple.com/ca/app/heroic-defense/id6742034673?uo=2" target="_blank">App Store</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- The Singing Cats -->
+                <div class="project-card reveal-child">
+                    <div class="project-bg" style="background-image: url('https://play-lh.googleusercontent.com/eZmHx0AqsqnbvKm6uoDiigpFNGBy8x3jvp3wMdz9qXkICub-f__ednQbx01cxzlR8E5l=s248-rw')"></div>
+                    <div class="project-overlay"></div>
+                    <a href="https://play.google.com/store/apps/details?id=com.echo.duetcatsgacha&hl=en" class="project-ext-link" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                    <div class="project-bottom">
+                        <h3>The Singing Cats</h3>
+                        <div class="project-tags">
+                            <span>Unity</span><span>Music</span><span>Mobile</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://play.google.com/store/apps/details?id=com.echo.duetcatsgacha&hl=en" target="_blank">Google Play</a>
+                            <a href="https://apps.apple.com/vn/app/the-singing-cats-idle-gacha/id6742020927?l=vi" target="_blank">App Store</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Word Music -->
+                <div class="project-card reveal-child">
+                    <div class="project-bg" style="background-image: url('word-music-icon.png')"></div>
+                    <div class="project-overlay"></div>
+                    <a href="https://play.google.com/store/apps/details?id=com.core.wordmusic" class="project-ext-link" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                    <div class="project-bottom">
+                        <h3>Word Music: Puzzle Melody</h3>
+                        <div class="project-tags">
+                            <span>Unity</span><span>Music</span><span>Puzzle</span><span>Mobile</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://play.google.com/store/apps/details?id=com.core.wordmusic" target="_blank">Google Play</a>
+                            <a href="https://apps.apple.com/us/app/word-puzzle-music/id6751626442" target="_blank">App Store</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hexa Block Away -->
+                <div class="project-card reveal-child">
+                    <div class="project-bg" style="background-image: url('hexa-game-icon.png')"></div>
+                    <div class="project-overlay"></div>
+                    <a href="https://play.google.com/store/apps/details?id=com.ngd.hexamusic" class="project-ext-link" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                    <div class="project-bottom">
+                        <h3>Hexa Block Away: Melody Puzzle</h3>
+                        <div class="project-tags">
+                            <span>Unity</span><span>Music</span><span>Puzzle</span><span>Mobile</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://play.google.com/store/apps/details?id=com.ngd.hexamusic" target="_blank">Google Play</a>
+                            <a href="https://apps.apple.com/us/app/hexa-block-away-melody-puzzle/id6755384175" target="_blank">App Store</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tap Music Gallery -->
+                <div class="project-card reveal-child">
+                    <div class="project-bg" style="background-image: url('tap-music-icon.png')"></div>
+                    <div class="project-overlay"></div>
+                    <a href="https://play.google.com/store/apps/details?id=com.ngd.tapmusic" class="project-ext-link" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                    <div class="project-bottom">
+                        <h3>Tap Music Gallery</h3>
+                        <div class="project-tags">
+                            <span>Unity</span><span>Music</span><span>Puzzle</span><span>Mobile</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://play.google.com/store/apps/details?id=com.ngd.tapmusic" target="_blank">Google Play</a>
+                            <a href="https://apps.apple.com/app/tap-music-gallery/id6752386492" target="_blank">App Store</a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
     <!-- Experience Section -->
     <section id="experience" class="experience">
-        <h2>Experience</h2>
-        <div class="experience-list">
-            <!-- Amanotes -->
-            <div class="job-card">
-                <div class="job-header">
-                    <img class="company-logo" src="amanotes-logo.png" alt="Amanotes Logo">
-                    <div class="job-header-info">
-                        <h3>Unity Developer</h3>
-                        <h4>Amanotes &middot; Full-time</h4>
-                        <p class="job-duration">Feb 2025 – Present &middot; Ho Chi Minh City, Vietnam &middot; On-site</p>
+        <div class="section-inner">
+            <h2 class="section-heading reveal">EXPERIENCE</h2>
+            <div class="timeline">
+
+                <!-- Amanotes -->
+                <div class="timeline-entry reveal-child">
+                    <div class="timeline-date">FEB 2025 – NOW</div>
+                    <div class="timeline-connector">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-line"></div>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="tl-header">
+                            <img class="company-logo" src="amanotes-logo.png" alt="Amanotes Logo">
+                            <div>
+                                <h3>Unity Developer</h3>
+                                <h4>Amanotes · Full-time</h4>
+                                <p class="job-duration">Feb 2025 – Present · Ho Chi Minh City, Vietnam · On-site</p>
+                            </div>
+                        </div>
+                        <p>Contributing to Amanotes' music game portfolio across multiple live mobile titles. Pioneering AI-driven development workflows within the team to accelerate delivery and quality.</p>
+                        <ul class="job-bullets">
+                            <li>Develop and ship features across multiple music puzzle games on iOS and Android</li>
+                            <li>Build entire game flows end-to-end using AI — leveraging MCP, Claude Code, and Cursor to compress development timelines</li>
+                            <li>Implement gameplay systems, UI, and live content updates on high-traffic titles</li>
+                        </ul>
+                        <div class="job-skill-tags">
+                            <span>C#</span><span>Unity</span><span>Generative AI</span><span>MCP</span><span>Claude Code</span><span>GitLab</span>
+                        </div>
+                        <div class="job-projects">
+                            <a href="https://play.google.com/store/apps/details?id=com.echo.duetcatsgacha" target="_blank"><img class="project-thumb" src="https://play-lh.googleusercontent.com/eZmHx0AqsqnbvKm6uoDiigpFNGBy8x3jvp3wMdz9qXkICub-f__ednQbx01cxzlR8E5l=s248-rw" alt="The Singing Cats"></a>
+                            <a href="https://play.google.com/store/apps/details?id=com.core.wordmusic" target="_blank"><img class="project-thumb" src="word-music-icon.png" alt="Word Music"></a>
+                            <a href="https://play.google.com/store/apps/details?id=com.ngd.hexamusic" target="_blank"><img class="project-thumb" src="hexa-game-icon.png" alt="Hexa Block Away"></a>
+                            <a href="https://play.google.com/store/apps/details?id=com.ngd.tapmusic" target="_blank"><img class="project-thumb" src="tap-music-icon.png" alt="Tap Music Gallery"></a>
+                        </div>
                     </div>
                 </div>
-                <div class="job-description">
-                    <p>Contributing to Amanotes' music game portfolio across multiple live mobile titles. Pioneering AI-driven development workflows within the team to accelerate delivery and quality.</p>
-                    <ul class="job-bullets">
-                        <li>Develop and ship features across multiple music puzzle games on iOS and Android</li>
-                        <li>Build entire game flows end-to-end using AI — leveraging MCP, Claude Code, and Cursor to compress development timelines</li>
-                        <li>Implement gameplay systems, UI, and live content updates on high-traffic titles</li>
-                    </ul>
-                </div>
-                <div class="job-skill-tags">
-                    <span>C#</span>
-                    <span>Unity</span>
-                    <span>Generative AI</span>
-                    <span>MCP</span>
-                    <span>Claude Code</span>
-                    <span>GitLab</span>
-                </div>
-                <div class="job-projects">
-                    <a href="https://play.google.com/store/apps/details?id=com.echo.duetcatsgacha" target="_blank">
-                        <img class="project-thumb" src="https://play-lh.googleusercontent.com/eZmHx0AqsqnbvKm6uoDiigpFNGBy8x3jvp3wMdz9qXkICub-f__ednQbx01cxzlR8E5l=s248-rw" alt="The Singing Cats">
-                    </a>
-                    <a href="https://play.google.com/store/apps/details?id=com.core.wordmusic" target="_blank">
-                        <img class="project-thumb" src="word-music-icon.png" alt="Word Music">
-                    </a>
-                    <a href="https://play.google.com/store/apps/details?id=com.ngd.hexamusic" target="_blank">
-                        <img class="project-thumb" src="hexa-game-icon.png" alt="Hexa Block Away">
-                    </a>
-                    <a href="https://play.google.com/store/apps/details?id=com.ngd.tapmusic" target="_blank">
-                        <img class="project-thumb" src="tap-music-icon.png" alt="Tap Music Gallery">
-                    </a>
-                </div>
-            </div>
-            <!-- PlayAd -->
-            <div class="job-card">
-                <div class="job-header">
-                    <img class="company-logo" src="https://play-lh.googleusercontent.com/GRj3HvpLB3WZIJIYCIEvWRHVPxRIH0gZEwLGdU9ijAFY8rHtXr9HTGWzkOtSiJHT7hGe=w480-h960-rw" alt="PlayAd Logo">
-                    <div class="job-header-info">
-                        <h3>Unity Developer</h3>
-                        <h4>PlayAd &middot; Full-time</h4>
-                        <p class="job-duration">Jul 2024 – Feb 2025 &middot; 8 mos &middot; Ho Chi Minh City, Vietnam &middot; On-site</p>
+
+                <!-- PlayAd -->
+                <div class="timeline-entry reveal-child">
+                    <div class="timeline-date">JUL 2024 – FEB 2025</div>
+                    <div class="timeline-connector">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-line"></div>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="tl-header">
+                            <img class="company-logo" src="https://play-lh.googleusercontent.com/GRj3HvpLB3WZIJIYCIEvWRHVPxRIH0gZEwLGdU9ijAFY8rHtXr9HTGWzkOtSiJHT7hGe=w480-h960-rw" alt="PlayAd Logo">
+                            <div>
+                                <h3>Unity Developer</h3>
+                                <h4>PlayAd · Full-time</h4>
+                                <p class="job-duration">Jul 2024 – Feb 2025 · 8 mos · Ho Chi Minh City, Vietnam · On-site</p>
+                            </div>
+                        </div>
+                        <p>Sole developer on each project alongside one artist and one designer — owned the full technical stack of every title from zero to shipped.</p>
+                        <ul class="job-bullets">
+                            <li>Integrated Ads SDK, Firebase, and third-party analytics from the ground up on new titles</li>
+                            <li>Customised VFX and built a clean, maintainable game framework per project</li>
+                            <li>Implemented UI/UX from designer assets into polished Unity screens</li>
+                            <li>Took over maintenance on high-traffic live titles: new content additions and legacy bug fixes</li>
+                        </ul>
+                        <div class="job-skill-tags">
+                            <span>C#</span><span>Unity</span><span>Firebase</span><span>Ads SDK</span><span>UI/UX</span>
+                        </div>
+                        <div class="job-projects">
+                            <a href="https://play.google.com/store/apps/details?id=com.hd.heroic.defense" target="_blank"><img class="project-thumb" src="https://play-lh.googleusercontent.com/w0s401oHZno1m29gsm49Ieuj5RFyz5D5j4MqHfpzQDLlxS9RxosGk_8MpnU9-SFYkrg=w480-h960-rw" alt="Heroic Defense"></a>
+                            <a href="https://play.google.com/store/apps/details?id=game.bb.ball.blast" target="_blank"><img class="project-thumb" src="https://play-lh.googleusercontent.com/1weDP-ODyx-k_802dQ04RkgNw1-gJQtUluZ3DMZ1_X6-1XS5L1Gz1gq-2QzYVFGxSsMO=w480-h960-rw" alt="Ball Destroy"></a>
+                            <a href="https://play.google.com/store/apps/details?id=com.pex.planet.extinction" target="_blank"><img class="project-thumb" src="https://play-lh.googleusercontent.com/GRj3HvpLB3WZIJIYCIEvWRHVPxRIH0gZEwLGdU9ijAFY8rHtXr9HTGWzkOtSiJHT7hGe=w480-h960-rw" alt="Planet Extinction"></a>
+                        </div>
                     </div>
                 </div>
-                <div class="job-description">
-                    <p>Sole developer on each project alongside one artist and one designer — owned the full technical stack of every title from zero to shipped.</p>
-                    <ul class="job-bullets">
-                        <li>Integrated Ads SDK, Firebase, and third-party analytics from the ground up on new titles</li>
-                        <li>Customised VFX and built a clean, maintainable game framework per project</li>
-                        <li>Implemented UI/UX from designer assets into polished Unity screens</li>
-                        <li>Took over maintenance on high-traffic live titles: new content additions and legacy bug fixes</li>
-                    </ul>
-                </div>
-                <div class="job-skill-tags">
-                    <span>C#</span>
-                    <span>Unity</span>
-                    <span>Firebase</span>
-                    <span>Ads SDK</span>
-                    <span>UI/UX</span>
-                </div>
-                <div class="job-projects">
-                    <a href="https://play.google.com/store/apps/details?id=com.hd.heroic.defense" target="_blank">
-                        <img class="project-thumb" src="https://play-lh.googleusercontent.com/w0s401oHZno1m29gsm49Ieuj5RFyz5D5j4MqHfpzQDLlxS9RxosGk_8MpnU9-SFYkrg=w480-h960-rw" alt="Heroic Defense">
-                    </a>
-                    <a href="https://play.google.com/store/apps/details?id=game.bb.ball.blast" target="_blank">
-                        <img class="project-thumb" src="https://play-lh.googleusercontent.com/1weDP-ODyx-k_802dQ04RkgNw1-gJQtUluZ3DMZ1_X6-1XS5L1Gz1gq-2QzYVFGxSsMO=w480-h960-rw" alt="Ball Destroy">
-                    </a>
-                    <a href="https://play.google.com/store/apps/details?id=com.pex.planet.extinction" target="_blank">
-                        <img class="project-thumb" src="https://play-lh.googleusercontent.com/GRj3HvpLB3WZIJIYCIEvWRHVPxRIH0gZEwLGdU9ijAFY8rHtXr9HTGWzkOtSiJHT7hGe=w480-h960-rw" alt="Planet Extinction">
-                    </a>
-                </div>
-            </div>
-            <!-- Topebox -->
-            <div class="job-card">
-                <div class="job-header">
-                    <img class="company-logo" src="topebox-logo.png" alt="Topebox Logo">
-                    <div class="job-header-info">
-                        <h3>Unity Developer &middot; Dev Team Sub-Leader</h3>
-                        <h4>Topebox &middot; Full-time</h4>
-                        <p class="job-duration">Nov 2022 – Jun 2024 &middot; 1 yr 8 mos &middot; Ho Chi Minh City, Vietnam &middot; On-site</p>
+
+                <!-- Topebox -->
+                <div class="timeline-entry reveal-child">
+                    <div class="timeline-date">NOV 2022 – JUN 2024</div>
+                    <div class="timeline-connector">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-line"></div>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="tl-header">
+                            <img class="company-logo" src="topebox-logo.png" alt="Topebox Logo">
+                            <div>
+                                <h3>Unity Developer · Dev Team Sub-Leader</h3>
+                                <h4>Topebox · Full-time</h4>
+                                <p class="job-duration">Nov 2022 – Jun 2024 · 1 yr 8 mos · Ho Chi Minh City, Vietnam · On-site</p>
+                            </div>
+                        </div>
+                        <p>Core developer on Mimiland, a social simulation game with a large active player base. Grew into a sub-leader role, owning technical delivery while coordinating the dev team.</p>
+                        <ul class="job-bullets">
+                            <li>Owned server API integration across gameplay, social features, and live events</li>
+                            <li>Developed core game mechanics and systems end-to-end, from design to ship</li>
+                            <li>Led code reviews, coordinated task delegation, and unblocked other developers</li>
+                            <li>Translated UI/UX designs into polished, performant Unity implementations</li>
+                        </ul>
+                        <div class="job-skill-tags">
+                            <span>C#</span><span>Unity</span><span>Server API</span><span>Team Leadership</span><span>UI/UX</span>
+                        </div>
+                        <div class="job-projects">
+                            <a href="https://play.google.com/store/apps/details?id=com.games.city.mimiland" target="_blank"><img class="project-thumb" src="https://play-lh.googleusercontent.com/9WjvFonSvANwCmL2kYfrS7BICaMdArMtH67-YJJ03WyyLNbopOAPgBGD5pB9yB9zAq4=w480-h960-rw" alt="Mimiland"></a>
+                        </div>
                     </div>
                 </div>
-                <div class="job-description">
-                    <p>Core developer on Mimiland, a social simulation game with a large active player base. Grew into a sub-leader role, owning technical delivery while coordinating the dev team.</p>
-                    <ul class="job-bullets">
-                        <li>Owned server API integration across gameplay, social features, and live events</li>
-                        <li>Developed core game mechanics and systems end-to-end, from design to ship</li>
-                        <li>Led code reviews, coordinated task delegation, and unblocked other developers</li>
-                        <li>Translated UI/UX designs into polished, performant Unity implementations</li>
-                    </ul>
-                </div>
-                <div class="job-skill-tags">
-                    <span>C#</span>
-                    <span>Unity</span>
-                    <span>Server API</span>
-                    <span>Team Leadership</span>
-                    <span>UI/UX</span>
-                </div>
-                <div class="job-projects">
-                    <a href="https://play.google.com/store/apps/details?id=com.games.city.mimiland" target="_blank">
-                        <img class="project-thumb" src="https://play-lh.googleusercontent.com/9WjvFonSvANwCmL2kYfrS7BICaMdArMtH67-YJJ03WyyLNbopOAPgBGD5pB9yB9zAq4=w480-h960-rw" alt="Mimiland">
-                    </a>
-                </div>
-            </div>
-            <!-- Latte Games -->
-            <div class="job-card">
-                <div class="job-header">
-                    <img class="company-logo" src="latte-games-logo.png" alt="Latte Games Logo">
-                    <div class="job-header-info">
-                        <h3>Unity Developer</h3>
-                        <h4>Latte Games &middot; Part-time</h4>
-                        <p class="job-duration">Jul 2022 – Oct 2022 &middot; 4 mos &middot; Ho Chi Minh City, Vietnam &middot; On-site</p>
+
+                <!-- Latte Games -->
+                <div class="timeline-entry reveal-child">
+                    <div class="timeline-date">JUL 2022 – OCT 2022</div>
+                    <div class="timeline-connector">
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="tl-header">
+                            <img class="company-logo" src="latte-games-logo.png" alt="Latte Games Logo">
+                            <div>
+                                <h3>Unity Developer</h3>
+                                <h4>Latte Games · Part-time</h4>
+                                <p class="job-duration">Jul 2022 – Oct 2022 · 4 mos · Ho Chi Minh City, Vietnam · On-site</p>
+                            </div>
+                        </div>
+                        <p>Part-time role in a lean team environment focused on rapid prototyping — building mobile game concepts from scratch and iterating quickly on core mechanics.</p>
+                        <ul class="job-bullets">
+                            <li>Built gameplay prototypes in Unity from scratch under tight timelines</li>
+                            <li>Fast-iterated on core mechanics with direct playtest feedback loops</li>
+                        </ul>
+                        <div class="job-skill-tags">
+                            <span>C#</span><span>Unity</span><span>Rapid Prototyping</span>
+                        </div>
                     </div>
                 </div>
-                <div class="job-description">
-                    <p>Part-time role in a lean team environment focused on rapid prototyping — building mobile game concepts from scratch and iterating quickly on core mechanics.</p>
-                    <ul class="job-bullets">
-                        <li>Built gameplay prototypes in Unity from scratch under tight timelines</li>
-                        <li>Fast-iterated on core mechanics with direct playtest feedback loops</li>
-                    </ul>
-                </div>
-                <div class="job-skill-tags">
-                    <span>C#</span>
-                    <span>Unity</span>
-                    <span>Rapid Prototyping</span>
-                </div>
+
             </div>
         </div>
     </section>
 
-    <section id="skills" class="skills">
-        <h2>Skills & Technologies</h2>
-        <div class="skills-grid">
-            <!-- Core -->
-            <div class="skill-card">
-                <i class="fas fa-gamepad"></i>
-                <h3>Unity Development</h3>
-                <p class="skill-desc">2D, 3D, Mobile, PC</p>
-            </div>
-            <div class="skill-card">
-                <i class="fas fa-code"></i>
-                <h3>C#</h3>
-                <p class="skill-desc">OOP, design patterns, clean architecture</p>
-            </div>
-            <div class="skill-card">
-                <i class="fas fa-cube"></i>
-                <h3>3D Game Development</h3>
-                <p class="skill-desc">Combat systems, animation, physics</p>
-            </div>
-            <div class="skill-card">
-                <i class="fas fa-th-large"></i>
-                <h3>2D Game Development</h3>
-                <p class="skill-desc">Platformers, casual, mobile games</p>
-            </div>
-            <!-- AI -->
-            <div class="skill-card">
-                <i class="fas fa-wand-magic-sparkles"></i>
-                <h3>AI Game Development</h3>
-                <p class="skill-desc">Full game builds end-to-end with AI — design, code, and ship</p>
-            </div>
-            <div class="skill-card">
-                <i class="fas fa-network-wired"></i>
-                <h3>MCP Integration</h3>
-                <p class="skill-desc">Model Context Protocol — custom AI tools & Unity Editor automation</p>
-            </div>
-            <div class="skill-card">
-                <i class="fas fa-robot"></i>
-                <h3>AI Dev Tools</h3>
-                <p class="skill-desc">Cursor, Claude Code, Copilot, Windsurf</p>
-            </div>
-            <div class="skill-card">
-                <i class="fas fa-microchip"></i>
-                <h3>Prompt Engineering</h3>
-                <p class="skill-desc">GPT-4o, Claude 3.5/4, Gemini — structured prompting for code & assets</p>
-            </div>
-            <!-- Platform & Tools -->
-            <div class="skill-card">
-                <i class="fas fa-fire"></i>
-                <h3>Firebase</h3>
-                <p class="skill-desc">Analytics, Remote Config, Crashlytics</p>
-            </div>
-            <div class="skill-card">
-                <i class="fas fa-mobile-alt"></i>
-                <h3>Mobile SDK</h3>
-                <p class="skill-desc">Ads SDK, IAP, analytics integration</p>
-            </div>
-            <div class="skill-card">
-                <i class="fab fa-git-alt"></i>
-                <h3>Git</h3>
-                <p class="skill-desc">Fork, GitLab, GitHub</p>
-            </div>
-            <div class="skill-card">
-                <i class="fas fa-balance-scale"></i>
-                <h3>Balancy</h3>
-                <p class="skill-desc">Live ops, remote game config</p>
-            </div>
+    <!-- CTA Strip -->
+    <section class="cta-strip">
+        <div class="section-inner cta-inner">
+            <p class="cta-sub">Open to new opportunities, collaborations, and exciting game projects.</p>
+            <h2>Let's build something legendary.</h2>
+            <a href="mailto:hoanganh.tang0202@gmail.com" class="btn-primary">Get In Touch →</a>
         </div>
     </section>
 
-    <section id="projects" class="projects">
-        <h2>Featured Projects</h2>
-        <div class="projects-grid">
-            <!-- The Wanderer - Personal Project -->
-            <div class="project-card">
-                <div class="pixel-corner tl"></div>
-                <div class="pixel-corner tr"></div>
-                <div class="pixel-corner bl"></div>
-                <div class="pixel-corner br"></div>
-                <div class="pixel-edge top"></div>
-                <div class="pixel-edge bottom"></div>
-                <div class="pixel-edge left"></div>
-                <div class="pixel-edge right"></div>
-                <div class="project-image">
-                    <img src="https://img.itch.zone/aW1hZ2UvMTQ5OTIzNC84NzM4ODExLnBuZw==/original/OMB4d0.png" alt="The Wanderer">
-                </div>
-                <div class="project-info">
-                    <h3>The Wanderer</h3>
-                    <p>A 2D platformer action-adventure game where you play as a nameless wanderer caught in a mysterious conspiracy. Features combat, exploration, and an engaging narrative.</p>
-                    <div class="project-tags">
-                        <span>Unity</span>
-                        <span>2D</span>
-                        <span>Platformer</span>
-                        <span>Action</span>
-                    </div>
-                    <a href="https://viridienne.itch.io/the-wanderer" class="project-link" target="_blank">Play on itch.io</a>
-                </div>
-            </div>
-            <!-- 3D Project -->
-            <div class="project-card">
-                <div class="pixel-corner tl"></div>
-                <div class="pixel-corner tr"></div>
-                <div class="pixel-corner bl"></div>
-                <div class="pixel-corner br"></div>
-                <div class="pixel-edge top"></div>
-                <div class="pixel-edge bottom"></div>
-                <div class="pixel-edge left"></div>
-                <div class="pixel-edge right"></div>
-                <div class="project-image">
-                    <img src="the swordman.png" alt="The Swordman">
-                </div>
-                <div class="project-info">
-                    <h3>The Swordman</h3>
-                    <p>A 3D action game featuring dynamic combat mechanics, immersive environments, and fluid character animations. Developed as a personal project to showcase advanced Unity development skills.</p>
-                    <div class="project-tags">
-                        <span>Unity</span>
-                        <span>3D</span>
-                        <span>Action</span>
-                        <span>Combat</span>
-                    </div>
-                    <a href="https://youtu.be/utRvn2S_-P8" class="project-link" target="_blank">Watch Gameplay Video</a>
-                </div>
-            </div>
-            <!-- Mimiland - Topebox -->
-            <div class="project-card">
-                <div class="pixel-corner tl"></div>
-                <div class="pixel-corner tr"></div>
-                <div class="pixel-corner bl"></div>
-                <div class="pixel-corner br"></div>
-                <div class="pixel-edge top"></div>
-                <div class="pixel-edge bottom"></div>
-                <div class="pixel-edge left"></div>
-                <div class="pixel-edge right"></div>
-                <div class="project-image">
-                    <img src="https://play-lh.googleusercontent.com/9WjvFonSvANwCmL2kYfrS7BICaMdArMtH67-YJJ03WyyLNbopOAPgBGD5pB9yB9zAq4=w480-h960-rw" alt="Mimiland">
-                </div>
-                <div class="project-info">
-                    <h3>Mimiland</h3>
-                    <p>Social simulation game where you build, explore, and interact in a vibrant city. Developed at Topebox.</p>
-                    <div class="project-tags">
-                        <span>Unity</span>
-                        <span>C#</span>
-                        <span>Mobile</span>
-                    </div>
-                    <a href="https://play.google.com/store/apps/details?id=com.games.city.mimiland&hl=vi" class="project-link" target="_blank">View on Google Play</a>
-                    <a href="https://apps.apple.com/vn/app/mimiland/id1660327908" class="project-link" target="_blank">View on App Store</a>
-                </div>
-            </div>
-            <!-- Planet Extinction - PlayAd -->
-            <div class="project-card">
-                <div class="pixel-corner tl"></div>
-                <div class="pixel-corner tr"></div>
-                <div class="pixel-corner bl"></div>
-                <div class="pixel-corner br"></div>
-                <div class="pixel-edge top"></div>
-                <div class="pixel-edge bottom"></div>
-                <div class="pixel-edge left"></div>
-                <div class="pixel-edge right"></div>
-                <div class="project-image">
-                    <img src="https://play-lh.googleusercontent.com/GRj3HvpLB3WZIJIYCIEvWRHVPxRIH0gZEwLGdU9ijAFY8rHtXr9HTGWzkOtSiJHT7hGe=w480-h960-rw" alt="Planet Extinction">
-                </div>
-                <div class="project-info">
-                    <h3>Planet Extinction</h3>
-                    <p>Unleash cosmic power to destroy planets in this visually stunning, physics-based casual game. Developed at PlayAd.</p>
-                    <div class="project-tags">
-                        <span>Unity</span>
-                        <span>Physics</span>
-                        <span>Mobile</span>
-                    </div>
-                    <a href="https://play.google.com/store/apps/details?id=com.pex.planet.extinction&hl=en" class="project-link" target="_blank">View on Google Play</a>
-                </div>
-            </div>
-            <!-- Ball Destroy - PlayAd -->
-            <div class="project-card">
-                <div class="pixel-corner tl"></div>
-                <div class="pixel-corner tr"></div>
-                <div class="pixel-corner bl"></div>
-                <div class="pixel-corner br"></div>
-                <div class="pixel-edge top"></div>
-                <div class="pixel-edge bottom"></div>
-                <div class="pixel-edge left"></div>
-                <div class="pixel-edge right"></div>
-                <div class="project-image">
-                    <img src="https://play-lh.googleusercontent.com/1weDP-ODyx-k_802dQ04RkgNw1-gJQtUluZ3DMZ1_X6-1XS5L1Gz1gq-2QzYVFGxSsMO=w480-h960-rw" alt="Ball Destroy">
-                </div>
-                <div class="project-info">
-                    <h3>Ball Destroy</h3>
-                    <p>Command elemental monsters to defend the planet from meteor storms in this fast-paced arcade game. Developed at PlayAd.</p>
-                    <div class="project-tags">
-                        <span>Unity</span>
-                        <span>Arcade</span>
-                        <span>Mobile</span>
-                    </div>
-                    <a href="https://play.google.com/store/apps/details?id=game.bb.ball.blast&hl=en" class="project-link" target="_blank">View on Google Play</a>
-                </div>
-            </div>
-            <!-- Heroic Defense - PlayAd -->
-            <div class="project-card">
-                <div class="pixel-corner tl"></div>
-                <div class="pixel-corner tr"></div>
-                <div class="pixel-corner bl"></div>
-                <div class="pixel-corner br"></div>
-                <div class="pixel-edge top"></div>
-                <div class="pixel-edge bottom"></div>
-                <div class="pixel-edge left"></div>
-                <div class="pixel-edge right"></div>
-                <div class="project-image">
-                    <img src="https://play-lh.googleusercontent.com/w0s401oHZno1m29gsm49Ieuj5RFyz5D5j4MqHfpzQDLlxS9RxosGk_8MpnU9-SFYkrg=w480-h960-rw" alt="Heroic Defense">
-                </div>
-                <div class="project-info">
-                    <h3>Heroic Defense</h3>
-                    <p>Defend the galaxy in this strategic tower defense game with hero upgrades and epic battles. Developed at PlayAd.</p>
-                    <div class="project-tags">
-                        <span>Unity</span>
-                        <span>Tower Defense</span>
-                        <span>Mobile</span>
-                    </div>
-                    <a href="https://play.google.com/store/apps/details?id=com.hd.heroic.defense&hl=en" class="project-link" target="_blank">View on Google Play</a>
-                    <a href="https://apps.apple.com/ca/app/heroic-defense/id6742034673?uo=2" class="project-link" target="_blank">View on App Store</a>
-                </div>
-            </div>
-            <!-- The Singing Cats - Amanotes -->
-            <div class="project-card">
-                <div class="pixel-corner tl"></div>
-                <div class="pixel-corner tr"></div>
-                <div class="pixel-corner bl"></div>
-                <div class="pixel-corner br"></div>
-                <div class="pixel-edge top"></div>
-                <div class="pixel-edge bottom"></div>
-                <div class="pixel-edge left"></div>
-                <div class="pixel-edge right"></div>
-                <div class="project-image">
-                    <img src="https://play-lh.googleusercontent.com/eZmHx0AqsqnbvKm6uoDiigpFNGBy8x3jvp3wMdz9qXkICub-f__ednQbx01cxzlR8E5l=s248-rw" alt="The Singing Cats">
-                </div>
-                <div class="project-info">
-                    <h3>The Singing Cats</h3>
-                    <p>Idle gacha music game where you collect and perform with adorable singing cats. Developed at Amanotes.</p>
-                    <div class="project-tags">
-                        <span>Unity</span>
-                        <span>Music</span>
-                        <span>Mobile</span>
-                    </div>
-                    <a href="https://play.google.com/store/apps/details?id=com.echo.duetcatsgacha&hl=en" class="project-link" target="_blank">View on Google Play</a>
-                    <a href="https://apps.apple.com/vn/app/the-singing-cats-idle-gacha/id6742020927?l=vi" class="project-link" target="_blank">View on App Store</a>
-                </div>
-            </div>
-            <!-- Word Music - Amanotes -->
-            <div class="project-card">
-                <div class="pixel-corner tl"></div>
-                <div class="pixel-corner tr"></div>
-                <div class="pixel-corner bl"></div>
-                <div class="pixel-corner br"></div>
-                <div class="pixel-edge top"></div>
-                <div class="pixel-edge bottom"></div>
-                <div class="pixel-edge left"></div>
-                <div class="pixel-edge right"></div>
-                <div class="project-image">
-                    <img src="word-music-icon.png" alt="Word Music: Puzzle Melody">
-                </div>
-                <div class="project-info">
-                    <h3>Word Music: Puzzle Melody</h3>
-                    <p>A word puzzle game where music takes centre stage. Every word you find brings you closer to unlocking a complete song — the perfect harmony of brain-teasing fun and audio discovery. Developed at Amanotes.</p>
-                    <div class="project-tags">
-                        <span>Unity</span>
-                        <span>Music</span>
-                        <span>Puzzle</span>
-                        <span>Mobile</span>
-                    </div>
-                    <a href="https://play.google.com/store/apps/details?id=com.core.wordmusic" class="project-link" target="_blank">View on Google Play</a>
-                    <a href="https://apps.apple.com/us/app/word-puzzle-music/id6751626442" class="project-link" target="_blank">View on App Store</a>
-                </div>
-            </div>
-            <!-- Hexa Block Away - Amanotes -->
-            <div class="project-card">
-                <div class="pixel-corner tl"></div>
-                <div class="pixel-corner tr"></div>
-                <div class="pixel-corner bl"></div>
-                <div class="pixel-corner br"></div>
-                <div class="pixel-edge top"></div>
-                <div class="pixel-edge bottom"></div>
-                <div class="pixel-edge left"></div>
-                <div class="pixel-edge right"></div>
-                <div class="project-image">
-                    <img src="hexa-game-icon.png" alt="Hexa Block Away: Melody Puzzle">
-                </div>
-                <div class="project-info">
-                    <h3>Hexa Block Away: Melody Puzzle</h3>
-                    <p>A calming hexa block puzzle that blends hexagon tile mechanics, block sliding, and gentle piano music into a soothing experience. Clear the board, free your mind. Developed at Amanotes.</p>
-                    <div class="project-tags">
-                        <span>Unity</span>
-                        <span>Music</span>
-                        <span>Puzzle</span>
-                        <span>Mobile</span>
-                    </div>
-                    <a href="https://play.google.com/store/apps/details?id=com.ngd.hexamusic" class="project-link" target="_blank">View on Google Play</a>
-                    <a href="https://apps.apple.com/us/app/hexa-block-away-melody-puzzle/id6755384175" class="project-link" target="_blank">View on App Store</a>
-                </div>
-            </div>
-            <!-- Tap Music Gallery - Amanotes -->
-            <div class="project-card">
-                <div class="pixel-corner tl"></div>
-                <div class="pixel-corner tr"></div>
-                <div class="pixel-corner bl"></div>
-                <div class="pixel-corner br"></div>
-                <div class="pixel-edge top"></div>
-                <div class="pixel-edge bottom"></div>
-                <div class="pixel-edge left"></div>
-                <div class="pixel-edge right"></div>
-                <div class="project-image">
-                    <img src="tap-music-icon.png" alt="Tap Music Gallery">
-                </div>
-                <div class="project-info">
-                    <h3>Tap Music Gallery</h3>
-                    <p>Every song comes with a story you can play, hear, and collect. Tap directional tiles to clear the board, reveal hidden artwork, and bring the music to life — each tap a note that harmonises with the track. Developed at Amanotes.</p>
-                    <div class="project-tags">
-                        <span>Unity</span>
-                        <span>Music</span>
-                        <span>Puzzle</span>
-                        <span>Mobile</span>
-                    </div>
-                    <a href="https://play.google.com/store/apps/details?id=com.ngd.tapmusic" class="project-link" target="_blank">View on Google Play</a>
-                    <a href="https://apps.apple.com/app/tap-music-gallery/id6752386492" class="project-link" target="_blank">View on App Store</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    <!-- Contact Section -->
     <section id="contact" class="contact">
-        <h2>Get In Touch</h2>
-        <div class="contact-content">
-            <div class="contact-info">
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <a href="mailto:hoanganh.tang0202@gmail.com">hoanganh.tang0202@gmail.com</a>
+        <div class="section-inner">
+            <h2 class="section-heading reveal">GET IN TOUCH</h2>
+            <div class="contact-content">
+                <div class="contact-info reveal-child">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:hoanganh.tang0202@gmail.com">hoanganh.tang0202@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <a href="https://github.com/viridienne" target="_blank">github.com/viridienne</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-gamepad"></i>
+                        <a href="https://viridienne.itch.io/" target="_blank">viridienne.itch.io</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <a href="https://www.linkedin.com/in/hoanganh0245" target="_blank">linkedin.com/in/hoanganh0245</a>
+                    </div>
                 </div>
-                <div class="contact-item">
-                    <i class="fab fa-github"></i>
-                    <a href="https://github.com/viridienne" target="_blank">github.com/viridienne</a>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-gamepad"></i>
-                    <a href="https://viridienne.itch.io/" target="_blank">viridienne.itch.io</a>
-                </div>
-                <div class="contact-item">
-                    <i class="fab fa-linkedin"></i>
-                    <a href="https://www.linkedin.com/in/hoanganh0245" target="_blank">linkedin.com/in/hoanganh0245</a>
-                </div>
+                <form class="contact-form reveal-child">
+                    <input type="text" placeholder="Name" required>
+                    <input type="email" placeholder="Email" required>
+                    <textarea placeholder="Message" required></textarea>
+                    <button type="submit" class="btn-primary">Send Message</button>
+                </form>
             </div>
-            <form class="contact-form">
-                <input type="text" placeholder="Name" required>
-                <input type="email" placeholder="Email" required>
-                <textarea placeholder="Message" required></textarea>
-                <button type="submit" class="submit-button">Send Message</button>
-            </form>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Viridienne. All rights reserved.</p>
+        <div class="footer-inner">
+            <p class="footer-copy">&copy; 2024 Viridienne. All rights reserved.</p>
+            <div class="footer-socials">
+                <a href="https://github.com/viridienne" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/hoanganh0245" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://viridienne.itch.io/" target="_blank"><i class="fas fa-gamepad"></i></a>
+                <a href="mailto:hoanganh.tang0202@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+            <nav class="footer-nav">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+            </nav>
+        </div>
     </footer>
 
     <script src="script.js"></script>
