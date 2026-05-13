@@ -65,6 +65,12 @@ footer p {
 .contact-item,
 .contact-item a {
     font-size: 0.9rem;
+    color: #e0e0e0;
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    color: #FFD700;
 }
 
 /* Navigation */
