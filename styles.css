@@ -745,12 +745,50 @@ footer {
     margin: 0.5rem 0;
 }
 
+.job-skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.75rem;
+}
+
+.job-skill-tags span {
+    display: inline-block;
+    padding: 0.25rem 0.65rem;
+    background: rgba(255, 215, 0, 0.08);
+    border: 1px solid rgba(255, 215, 0, 0.25);
+    border-radius: 12px;
+    font-family: var(--body-font);
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: #ccc;
+}
+
+.job-projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 1rem;
+}
+
+.job-projects a {
+    display: inline-block;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.job-projects a:hover {
+    transform: translateY(-2px);
+    opacity: 0.85;
+}
+
 .project-thumb {
-    width: 48px;
-    height: 48px;
+    width: 52px;
+    height: 52px;
     border-radius: 8px;
     object-fit: cover;
-    margin-right: 0.5rem;
+    display: block;
 }
 
 /* Expandable Skills Section */
