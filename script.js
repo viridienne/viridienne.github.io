@@ -79,6 +79,21 @@ const headingObserver = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.section-heading').forEach(h => headingObserver.observe(h));
 
+// View All Projects toggle
+function toggleAllProjects() {
+    const extra = document.getElementById('projects-extra');
+    const btn   = document.getElementById('view-all-btn');
+    const open  = extra.classList.toggle('open');
+    btn.innerHTML = open
+        ? '<i class="fas fa-times"></i> Show Less'
+        : '<i class="fas fa-th-large"></i> View All Projects';
+    if (open) {
+        extra.querySelectorAll('.reveal-child').forEach(el => {
+            if (!el.classList.contains('visible')) el.classList.add('visible');
+        });
+    }
+}
+
 // Contact form
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
