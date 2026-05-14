@@ -191,7 +191,7 @@ nav ul li a.active {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background-image: url('elden ring wallpaper.jpeg');
+    background-image: url('assets/elden ring wallpaper.jpeg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
