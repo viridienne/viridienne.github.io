@@ -40,25 +40,27 @@ function spawnHeadingParticles(heading) {
         const p = document.createElement('span');
         p.className = 'heading-particle';
 
-        const size   = 2 + Math.random() * 3.5;
-        // Spread particles across the text area (~60% of width centered)
+        const size   = 3 + Math.random() * 4;
         const startX = cx + (Math.random() - 0.5) * Math.min(w * 0.65, 380);
         const startY = h / 2 + (Math.random() - 0.5) * h * 0.5;
         const angle  = Math.random() * 2 * Math.PI;
-        const dist   = 28 + Math.random() * 65;
-        const tx     = Math.cos(angle) * dist;
-        const ty     = Math.sin(angle) * dist - 15; // slight upward bias
-        const dur    = (0.7 + Math.random() * 0.9).toFixed(2);
-        const delay  = (Math.random() * 0.5).toFixed(2);
+        const dist   = 30 + Math.random() * 70;
+        const tx     = (Math.cos(angle) * dist).toFixed(1);
+        const ty     = (Math.sin(angle) * dist - 15).toFixed(1);
+        const dur    = (0.8 + Math.random() * 0.9).toFixed(2);
+        const delay  = (Math.random() * 0.4).toFixed(2);
 
-        p.style.cssText =
-            `width:${size}px;height:${size}px;` +
-            `left:${startX}px;top:${startY}px;` +
-            `--hp-x:${tx.toFixed(1)}px;--hp-y:${ty.toFixed(1)}px;` +
-            `--hp-dur:${dur}s;--hp-delay:${delay}s;`;
+        p.style.width  = size + 'px';
+        p.style.height = size + 'px';
+        p.style.left   = startX + 'px';
+        p.style.top    = startY + 'px';
+        p.style.setProperty('--hp-x',     tx + 'px');
+        p.style.setProperty('--hp-y',     ty + 'px');
+        p.style.setProperty('--hp-dur',   dur + 's');
+        p.style.setProperty('--hp-delay', delay + 's');
 
         heading.appendChild(p);
-        setTimeout(() => p.remove(), (+dur + +delay + 0.15) * 1000);
+        setTimeout(() => p.remove(), (+dur + +delay + 0.2) * 1000);
     }
 }
 
@@ -67,14 +69,13 @@ const headingObserver = new IntersectionObserver((entries) => {
         if (!entry.isIntersecting) return;
         const el = entry.target;
         spawnHeadingParticles(el);
-        // Repeat every 2.4s for a continuous ambient effect
         const id = setInterval(() => {
             if (!document.contains(el)) { clearInterval(id); return; }
             spawnHeadingParticles(el);
         }, 2400);
         headingObserver.unobserve(el);
     });
-}, { threshold: 0.6 });
+}, { threshold: 0.2 });
 
 document.querySelectorAll('.section-heading').forEach(h => headingObserver.observe(h));
 
