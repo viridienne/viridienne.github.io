@@ -214,6 +214,29 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
+// Count-up animation for stat numbers
+const countUpObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const el = entry.target;
+        const target = parseInt(el.dataset.count, 10);
+        const suffix = el.dataset.suffix || '';
+        const duration = 1200;
+        const start = performance.now();
+
+        function tick(now) {
+            const progress = Math.min((now - start) / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3);
+            el.textContent = Math.round(eased * target) + suffix;
+            if (progress < 1) requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+        countUpObserver.unobserve(el);
+    });
+}, { threshold: 0.5 });
+
+document.querySelectorAll('.stat-number[data-count]').forEach(el => countUpObserver.observe(el));
+
 // Contact form
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
