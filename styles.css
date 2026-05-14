@@ -826,31 +826,42 @@ nav ul li a.active {
    CTA STRIP
    ===================== */
 .cta-strip {
-    background: #111111;
-    padding: 3rem 0;
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
+    background: var(--bg);
+    padding: 1.5rem 0;
 }
 
 .cta-inner {
-    text-align: center;
     display: flex;
-    flex-direction: column;
     align-items: center;
     gap: 1.5rem;
+    background: var(--surface);
+    border: 1px solid rgba(255, 184, 0, 0.5);
+    border-radius: var(--radius-card);
+    padding: 1.25rem 2rem;
+}
+
+.cta-icon {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.cta-text {
+    flex: 1;
 }
 
 .cta-strip h2 {
     font-family: var(--body-font);
-    font-size: clamp(1.5rem, 3vw, 2.4rem);
+    font-size: clamp(1rem, 2vw, 1.4rem);
     font-weight: 700;
-    color: var(--text);
+    color: var(--accent);
+    margin-bottom: 0.2rem;
 }
 
 .cta-sub {
-    font-size: 1rem;
+    font-size: 0.85rem;
     color: var(--text-sec);
-    max-width: 480px;
 }
 
 /* =====================
