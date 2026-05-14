@@ -13,7 +13,7 @@
     --pixel-font:   'Press Start 2P', monospace;
     --body-font:    'DM Sans', system-ui, sans-serif;
     --max-w:        1200px;
-    --section-pad:  120px;
+    --section-pad:  70px;
     --radius-card:  12px;
     --radius-tag:   8px;
 }
@@ -60,7 +60,7 @@ section {
     font-size: 1.4rem;
     color: var(--accent);
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     letter-spacing: 2px;
 }
 
@@ -518,7 +518,7 @@ nav ul li a.active {
 
 .project-card {
     position: relative;
-    height: 380px;
+    height: 260px;
     border-radius: var(--radius-card);
     overflow: hidden;
     cursor: pointer;
@@ -803,7 +803,7 @@ nav ul li a.active {
    ===================== */
 .cta-strip {
     background: #111111;
-    padding: 5rem 0;
+    padding: 3rem 0;
     border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
 }
@@ -996,7 +996,7 @@ footer {
 
 @media (max-width: 768px) {
     :root {
-        --section-pad: 80px;
+        --section-pad: 50px;
     }
     nav ul {
         display: none;
@@ -1011,7 +1011,7 @@ footer {
         grid-template-columns: 1fr;
     }
     .project-card {
-        height: 300px;
+        height: 220px;
     }
     .timeline-entry {
         grid-template-columns: 80px 28px 1fr;
