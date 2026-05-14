@@ -463,12 +463,13 @@ nav ul li a.active {
 }
 
 .skill-cat-icon {
-    width: 72px;
-    height: 72px;
+    width: 96px;
+    height: 96px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     flex-shrink: 0;
+    align-self: center;
 }
 
 .skill-category-card h3 {
