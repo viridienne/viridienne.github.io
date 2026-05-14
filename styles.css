@@ -83,7 +83,7 @@ section {
 /* Timeline entries slide in from right */
 .timeline-entry.reveal-child {
     transform: translateX(40px);
-    opacity: 0;
+    opacity: 1;
 }
 
 .timeline-entry.reveal-child.visible {
