@@ -167,33 +167,34 @@ nav ul li a {
     transition: color 0.2s;
 }
 
-nav ul li a:hover,
-nav ul li a.active {
+nav ul li a:hover {
     color: var(--text);
 }
 
 nav ul li a.active {
+    color: var(--accent);
+    background: rgba(255, 184, 0, 0.08);
+    padding: 0.35rem 0.6rem;
+    border-radius: 4px 4px 0 0;
     border-bottom: 2px solid var(--accent);
-    padding-bottom: 2px;
 }
 
 .nav-gamepad {
     width: 36px;
     height: 36px;
     border-radius: 50%;
-    border: 1px solid var(--border);
+    border: 1px solid var(--accent);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--text-sec);
+    color: var(--accent);
     font-size: 0.9rem;
-    transition: border-color 0.2s, color 0.2s;
+    transition: border-color 0.2s, color 0.2s, background 0.2s;
     flex-shrink: 0;
 }
 
 .nav-gamepad:hover {
-    border-color: var(--accent);
-    color: var(--accent);
+    background: var(--accent-glow);
 }
 
 /* =====================
@@ -653,6 +654,19 @@ nav ul li a.active {
 .timeline {
     display: flex;
     flex-direction: column;
+    position: relative;
+}
+
+/* Single continuous vertical line through all entries */
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: calc(140px + 1.5rem + 17px);
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: rgba(255, 184, 0, 0.35);
+    z-index: 0;
 }
 
 .timeline-entry {
@@ -691,10 +705,7 @@ nav ul li a.active {
 }
 
 .timeline-line {
-    width: 2px;
-    flex: 1;
-    min-height: 30px;
-    background: linear-gradient(to bottom, var(--accent), rgba(255, 184, 0, 0.08));
+    display: none;
 }
 
 .timeline-card {
@@ -1005,6 +1016,9 @@ footer {
         grid-template-columns: 110px 32px 1fr;
         gap: 0 1rem;
     }
+    .timeline::before {
+        left: calc(110px + 1rem + 15px);
+    }
 }
 
 @media (max-width: 768px) {
@@ -1029,6 +1043,9 @@ footer {
     .timeline-entry {
         grid-template-columns: 80px 28px 1fr;
         gap: 0 0.75rem;
+    }
+    .timeline::before {
+        left: calc(80px + 0.75rem + 13px);
     }
     .timeline-date {
         font-size: 0.6rem;
@@ -1055,6 +1072,9 @@ footer {
     }
     .timeline-date {
         display: none;
+    }
+    .timeline::before {
+        left: calc(0.75rem + 12px);
     }
     .hero-cta {
         flex-direction: column;
