@@ -1,7 +1,15 @@
 // Nav: transparent → solid on scroll
 const header = document.getElementById('navbar');
+const ctaFloat = document.getElementById('cta-float');
 window.addEventListener('scroll', () => {
     header.classList.toggle('scrolled', window.scrollY > 80);
+
+    // Show floating CTA after scrolling past hero, hide when contact section is in view
+    const hero = document.getElementById('home');
+    const contact = document.getElementById('contact');
+    const pastHero = window.scrollY > (hero ? hero.offsetHeight * 0.8 : 400);
+    const atContact = contact ? contact.getBoundingClientRect().top < window.innerHeight * 0.6 : false;
+    if (ctaFloat) ctaFloat.classList.toggle('visible', pastHero && !atContact);
 });
 
 // Smooth scrolling for anchor links
