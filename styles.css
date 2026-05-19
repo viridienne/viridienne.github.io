@@ -845,12 +845,18 @@ nav ul li a.active {
     padding: 2px;
 }
 
+.tl-header > div {
+    flex: 1;
+    min-width: 0;
+}
+
 .tl-header h3 {
     font-family: var(--pixel-font);
     font-size: 0.65rem;
     color: var(--accent);
     margin-bottom: 0.3rem;
     line-height: 1.6;
+    word-break: break-word;
 }
 
 .tl-header h4 {
@@ -1211,14 +1217,17 @@ footer {
         height: 220px;
     }
     .timeline-entry {
-        grid-template-columns: 80px 28px 1fr;
+        grid-template-columns: 0 28px 1fr;
         gap: 0 0.75rem;
     }
     .timeline::before {
-        left: calc(80px + 0.75rem + 13px);
+        left: calc(0.75rem + 13px);
     }
     .timeline-date {
-        font-size: 0.6rem;
+        display: none;
+    }
+    .timeline-card {
+        padding: 1rem;
     }
     .skills-grid {
         grid-template-columns: 1fr;
