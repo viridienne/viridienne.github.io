@@ -1217,17 +1217,19 @@ footer {
         height: 220px;
     }
     .timeline-entry {
-        grid-template-columns: 0 28px 1fr;
-        gap: 0 0.75rem;
+        display: block;
+    }
+    .timeline-date,
+    .timeline-connector {
+        display: none;
     }
     .timeline::before {
-        left: calc(0.75rem + 13px);
-    }
-    .timeline-date {
         display: none;
     }
     .timeline-card {
         padding: 1rem;
+        border-left: 3px solid rgba(255, 184, 0, 0.45);
+        margin-bottom: 1rem;
     }
     .skills-grid {
         grid-template-columns: 1fr;
@@ -1388,15 +1390,6 @@ footer {
 }
 
 @media (max-width: 480px) {
-    .timeline-entry {
-        grid-template-columns: 0 26px 1fr;
-    }
-    .timeline-date {
-        display: none;
-    }
-    .timeline::before {
-        left: calc(0.75rem + 12px);
-    }
     .hero-cta {
         flex-direction: column;
     }
