@@ -225,10 +225,13 @@ nav ul li a.active {
     display: flex;
     align-items: center;
     background-image: url('assets/elden ring wallpaper.jpeg');
-    background-size: cover;
+    background-size: min(100vw, var(--max-w)) auto;
     background-position: center 30%;
     background-attachment: fixed;
     overflow: hidden;
+    max-width: var(--max-w);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Scanline overlay */
@@ -1210,6 +1213,10 @@ footer {
 @media (max-width: 768px) {
     :root {
         --section-pad: 50px;
+    }
+    .hero {
+        background-attachment: scroll;
+        background-size: cover;
     }
     nav ul {
         display: none;
