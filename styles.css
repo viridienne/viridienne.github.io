@@ -46,8 +46,6 @@ ul { list-style: none; }
    LAYOUT HELPERS
    ===================== */
 .section-inner {
-    max-width: var(--max-w);
-    margin: 0 auto;
     padding: 0 2rem;
 }
 
@@ -132,8 +130,6 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: var(--max-w);
-    margin: 0 auto;
     padding: 1.25rem 2rem;
 }
 
@@ -1135,8 +1131,6 @@ footer {
 }
 
 .footer-inner {
-    max-width: var(--max-w);
-    margin: 0 auto;
     padding: 0 2rem;
     display: flex;
     align-items: center;
