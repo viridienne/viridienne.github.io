@@ -227,7 +227,6 @@ nav ul li a.active {
     background-image: url('assets/elden ring wallpaper.jpeg');
     background-size: cover;
     background-position: center 30%;
-    background-attachment: fixed;
     overflow: hidden;
 }
 
