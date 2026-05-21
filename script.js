@@ -1,3 +1,46 @@
+// Mobile hamburger menu
+const hamburger = document.getElementById('nav-hamburger');
+const mobileMenu = document.getElementById('mobile-menu');
+
+function openMobileMenu() {
+    hamburger.setAttribute('aria-expanded', 'true');
+    mobileMenu.setAttribute('aria-hidden', 'false');
+    mobileMenu.classList.add('open');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeMobileMenu() {
+    hamburger.setAttribute('aria-expanded', 'false');
+    mobileMenu.setAttribute('aria-hidden', 'true');
+    mobileMenu.classList.remove('open');
+    document.body.style.overflow = '';
+}
+
+if (hamburger) {
+    hamburger.addEventListener('click', () => {
+        const isOpen = hamburger.getAttribute('aria-expanded') === 'true';
+        isOpen ? closeMobileMenu() : openMobileMenu();
+    });
+}
+
+document.querySelectorAll('.mobile-nav-link').forEach(link => {
+    link.addEventListener('click', closeMobileMenu);
+});
+
+// Active nav link via IntersectionObserver
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('nav ul li a');
+const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            navLinks.forEach(a => {
+                a.classList.toggle('active', a.getAttribute('href') === `#${entry.target.id}`);
+            });
+        }
+    });
+}, { threshold: 0.35 });
+sections.forEach(s => sectionObserver.observe(s));
+
 // Nav: transparent → solid on scroll
 const header = document.getElementById('navbar');
 const ctaFloat = document.getElementById('cta-float');
@@ -29,7 +72,7 @@ const revealObserver = new IntersectionObserver((entries) => {
         if (el.classList.contains('reveal-child')) {
             const siblings = Array.from(el.parentElement.querySelectorAll('.reveal-child'));
             const idx = siblings.indexOf(el);
-            el.style.transitionDelay = `${idx * 0.1}s`;
+            el.style.transitionDelay = `${Math.min(idx * 0.08, 0.4)}s`;
         }
         el.classList.add('visible');
         revealObserver.unobserve(el);
