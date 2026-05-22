@@ -115,6 +115,8 @@ function spawnHeadingParticles(heading) {
     }
 }
 
+const headingIntervals = [];
+
 const headingObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (!entry.isIntersecting) return;
@@ -124,9 +126,14 @@ const headingObserver = new IntersectionObserver((entries) => {
             if (!document.contains(el)) { clearInterval(id); return; }
             spawnHeadingParticles(el);
         }, 2400);
+        headingIntervals.push(id);
         headingObserver.unobserve(el);
     });
 }, { threshold: 0.2 });
+
+document.addEventListener('visibilitychange', () => {
+    if (document.hidden) headingIntervals.forEach(clearInterval);
+});
 
 document.querySelectorAll('.section-heading').forEach(h => headingObserver.observe(h));
 
@@ -288,49 +295,54 @@ const projectData = {
     }
 };
 
+const _modal        = document.getElementById('project-modal');
+const _modalImage   = document.getElementById('modal-image');
+const _modalTitle   = document.getElementById('modal-title');
+const _modalDesc    = document.getElementById('modal-desc');
+const _modalTags    = document.getElementById('modal-tags');
+const _modalScreens = document.getElementById('modal-screenshots');
+const _modalLinks   = document.getElementById('modal-links');
+
 function openProjectModal(id) {
     const data = projectData[id];
     if (!data) return;
 
-    document.getElementById('modal-image').style.backgroundImage = `url('${data.image}')`;
-    document.getElementById('modal-title').textContent = data.title;
-    document.getElementById('modal-desc').textContent = data.desc;
+    _modalImage.style.backgroundImage = `url('${data.image}')`;
+    _modalTitle.textContent = data.title;
+    _modalDesc.textContent = data.desc;
 
-    const tagsEl = document.getElementById('modal-tags');
-    tagsEl.innerHTML = data.tags.map(t => `<span>${t}</span>`).join('');
+    _modalTags.innerHTML = data.tags.map(t => `<span>${t}</span>`).join('');
 
-    const screenshotsEl = document.getElementById('modal-screenshots');
     if (data.screenshots && data.screenshots.length > 0) {
-        screenshotsEl.innerHTML = `
+        _modalScreens.innerHTML = `
             <p class="modal-screenshots-label">// Screenshots</p>
             <div class="modal-screenshots-strip">
                 ${data.screenshots.map(url => `<img src="${url}" alt="${data.title} screenshot" loading="lazy">`).join('')}
             </div>`;
-        screenshotsEl.style.display = '';
+        _modalScreens.style.display = '';
     } else {
-        screenshotsEl.innerHTML = '';
-        screenshotsEl.style.display = 'none';
+        _modalScreens.innerHTML = '';
+        _modalScreens.style.display = 'none';
     }
 
-    const linksEl = document.getElementById('modal-links');
-    linksEl.innerHTML = data.links.map(l =>
+    _modalLinks.innerHTML = data.links.map(l =>
         `<a href="${l.url}" target="_blank" class="${l.cls}">${l.label}</a>`
     ).join('');
 
-    document.getElementById('project-modal').classList.add('open');
+    _modal.classList.add('open');
     document.body.style.overflow = 'hidden';
 }
 
 function closeProjectModal(event) {
-    if (event && event.target !== document.getElementById('project-modal')) return;
-    document.getElementById('project-modal').classList.remove('open');
+    if (event && event.target !== _modal) return;
+    _modal.classList.remove('open');
     document.body.style.overflow = '';
 }
 
 
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
-        document.getElementById('project-modal').classList.remove('open');
+        _modal.classList.remove('open');
         document.body.style.overflow = '';
     }
 });
