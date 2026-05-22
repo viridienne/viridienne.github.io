@@ -1843,6 +1843,60 @@ footer {
     margin-bottom: 1.25rem;
 }
 
+.modal-screenshots {
+    margin-bottom: 1.25rem;
+}
+
+.modal-screenshots-label {
+    font-family: var(--body-font);
+    font-size: 0.72rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    letter-spacing: 0.5px;
+    margin-bottom: 0.6rem;
+}
+
+.modal-screenshots-strip {
+    display: flex;
+    gap: 6px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 184, 0, 0.4) var(--surface-2);
+    padding-bottom: 6px;
+}
+
+.modal-screenshots-strip::-webkit-scrollbar {
+    height: 3px;
+}
+
+.modal-screenshots-strip::-webkit-scrollbar-track {
+    background: var(--surface-2);
+}
+
+.modal-screenshots-strip::-webkit-scrollbar-thumb {
+    background: rgba(255, 184, 0, 0.4);
+    border-radius: 2px;
+}
+
+.modal-screenshots-strip img {
+    height: 220px;
+    width: auto;
+    max-width: none;
+    object-fit: cover;
+    border: 1px solid var(--border-light);
+    border-radius: 2px;
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    transition: border-color 0.2s;
+    display: block;
+}
+
+.modal-screenshots-strip img:hover {
+    border-color: rgba(255, 184, 0, 0.5);
+}
+
 .modal-links {
     display: flex;
     flex-wrap: wrap;

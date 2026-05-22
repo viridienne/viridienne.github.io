@@ -138,6 +138,15 @@ const projectData = {
         image: 'https://play-lh.googleusercontent.com/eZmHx0AqsqnbvKm6uoDiigpFNGBy8x3jvp3wMdz9qXkICub-f__ednQbx01cxzlR8E5l=s248-rw',
         tags: ['Unity', 'C#', 'Music', 'Mobile'],
         desc: 'An idle gacha music game featuring adorable singing cats. Collect and evolve cats, build your band, and create harmonious melodies.',
+        screenshots: [
+            'assets/screens/edcg-ss/1.png',
+            'assets/screens/edcg-ss/2.png',
+            'assets/screens/edcg-ss/3.png',
+            'assets/screens/edcg-ss/4.png',
+            'assets/screens/edcg-ss/5.png',
+            'assets/screens/edcg-ss/6.png',
+            'assets/screens/edcg-ss/7.png',
+        ],
         links: [
             { label: '<i class="fab fa-google-play"></i> Google Play', url: 'https://play.google.com/store/apps/details?id=com.echo.duetcatsgacha&hl=en', cls: 'link-play' },
             { label: '<i class="fab fa-apple"></i> App Store', url: 'https://apps.apple.com/vn/app/the-singing-cats-idle-gacha/id6742020927?l=vi', cls: 'link-apple' }
@@ -148,6 +157,11 @@ const projectData = {
         image: 'assets/word-music-icon.png',
         tags: ['Unity', 'C#', 'Music', 'Puzzle', 'Mobile'],
         desc: 'A musical word puzzle game where solving letter challenges unlocks melodic rewards. Blend vocabulary and rhythm in a unique mobile experience.',
+        screenshots: [
+            'assets/screens/ncwom-ss/1.webp',
+            'assets/screens/ncwom-ss/2.webp',
+            'assets/screens/ncwom-ss/3.webp',
+        ],
         links: [
             { label: '<i class="fab fa-google-play"></i> Google Play', url: 'https://play.google.com/store/apps/details?id=com.core.wordmusic', cls: 'link-play' },
             { label: '<i class="fab fa-apple"></i> App Store', url: 'https://apps.apple.com/us/app/word-puzzle-music/id6751626442', cls: 'link-apple' }
@@ -158,6 +172,12 @@ const projectData = {
         image: 'assets/hexa-game-icon.png',
         tags: ['Unity', 'C#', 'Music', 'Puzzle', 'Mobile'],
         desc: 'A relaxing hexagonal block puzzle game where clearing stages unlocks musical pieces. Satisfying mechanics paired with a melodic soundtrack.',
+        screenshots: [
+            'assets/screens/nchm-ss/1.webp',
+            'assets/screens/nchm-ss/2.webp',
+            'assets/screens/nchm-ss/3.webp',
+            'assets/screens/nchm-ss/4.webp',
+        ],
         links: [
             { label: '<i class="fab fa-google-play"></i> Google Play', url: 'https://play.google.com/store/apps/details?id=com.ngd.hexamusic', cls: 'link-play' },
             { label: '<i class="fab fa-apple"></i> App Store', url: 'https://apps.apple.com/us/app/hexa-block-away-melody-puzzle/id6755384175', cls: 'link-apple' }
@@ -168,6 +188,12 @@ const projectData = {
         image: 'assets/tap-music-icon.png',
         tags: ['Unity', 'C#', 'Music', 'Puzzle', 'Mobile'],
         desc: 'A tap-based music gallery game where players uncover artwork and melodies through rhythm-driven tapping challenges.',
+        screenshots: [
+            'assets/screens/nct-ss/1.webp',
+            'assets/screens/nct-ss/2.webp',
+            'assets/screens/nct-ss/3.webp',
+            'assets/screens/nct-ss/4.webp',
+        ],
         links: [
             { label: '<i class="fab fa-google-play"></i> Google Play', url: 'https://play.google.com/store/apps/details?id=com.ngd.tapmusic', cls: 'link-play' },
             { label: '<i class="fab fa-apple"></i> App Store', url: 'https://apps.apple.com/app/tap-music-gallery/id6752386492', cls: 'link-apple' }
@@ -178,6 +204,13 @@ const projectData = {
         image: 'https://play-lh.googleusercontent.com/w0s401oHZno1m29gsm49Ieuj5RFyz5D5j4MqHfpzQDLlxS9RxosGk_8MpnU9-SFYkrg=w480-h960-rw',
         tags: ['Unity', 'C#', 'Tower Defense', 'Mobile'],
         desc: 'A strategic tower defense game where heroes defend against endless waves of enemies. Features hero upgrades, multiple tower types, and escalating difficulty.',
+        screenshots: [
+            'assets/screens/hd-ss/1.webp',
+            'assets/screens/hd-ss/2.webp',
+            'assets/screens/hd-ss/3.webp',
+            'assets/screens/hd-ss/4.webp',
+            'assets/screens/hd-ss/5.webp',
+        ],
         links: [
             { label: '<i class="fab fa-google-play"></i> Google Play', url: 'https://play.google.com/store/apps/details?id=com.hd.heroic.defense&hl=en', cls: 'link-play' },
             { label: '<i class="fab fa-apple"></i> App Store', url: 'https://apps.apple.com/ca/app/heroic-defense/id6742034673?uo=2', cls: 'link-apple' }
@@ -188,6 +221,12 @@ const projectData = {
         image: 'https://play-lh.googleusercontent.com/GRj3HvpLB3WZIJIYCIEvWRHVPxRIH0gZEwLGdU9ijAFY8rHtXr9HTGWzkOtSiJHT7hGe=w480-h960-rw',
         tags: ['Unity', 'C#', 'Arcade', 'Shooter', 'Mobile'],
         desc: 'A fast-paced arcade shooter where players pilot a spacecraft to defend planets from alien extinction events. Survive waves of enemies across the galaxy.',
+        screenshots: [
+            'assets/screens/pe-ss/1.webp',
+            'assets/screens/pe-ss/2.webp',
+            'assets/screens/pe-ss/3.webp',
+            'assets/screens/pe-ss/4.webp',
+        ],
         links: [
             { label: '<i class="fab fa-google-play"></i> Google Play', url: 'https://play.google.com/store/apps/details?id=com.pex.planet.extinction&hl=en', cls: 'link-play' }
         ]
@@ -197,6 +236,13 @@ const projectData = {
         image: 'https://play-lh.googleusercontent.com/1weDP-ODyx-k_802dQ04RkgNw1-gJQtUluZ3DMZ1_X6-1XS5L1Gz1gq-2QzYVFGxSsMO=w480-h960-rw',
         tags: ['Unity', 'C#', 'Arcade', 'Casual', 'Mobile'],
         desc: 'A satisfying casual arcade game where players launch balls to smash and destroy blocks. Simple controls with progressively challenging level designs.',
+        screenshots: [
+            'assets/screens/bd-ss/1.webp',
+            'assets/screens/bd-ss/2.webp',
+            'assets/screens/bd-ss/3.webp',
+            'assets/screens/bd-ss/4.webp',
+            'assets/screens/bd-ss/5.webp',
+        ],
         links: [
             { label: '<i class="fab fa-google-play"></i> Google Play', url: 'https://play.google.com/store/apps/details?id=game.bb.ball.blast&hl=en', cls: 'link-play' }
         ]
@@ -206,6 +252,15 @@ const projectData = {
         image: 'https://play-lh.googleusercontent.com/9WjvFonSvANwCmL2kYfrS7BICaMdArMtH67-YJJ03WyyLNbopOAPgBGD5pB9yB9zAq4=w480-h960-rw',
         tags: ['Unity', 'C#', 'Social Sim', 'Mobile'],
         desc: 'A vibrant social simulation game where players build and decorate their own virtual city, interact with neighbors, and grow a thriving community.',
+        screenshots: [
+            'assets/screens/mml-ss/1.webp',
+            'assets/screens/mml-ss/2.webp',
+            'assets/screens/mml-ss/3.webp',
+            'assets/screens/mml-ss/4.webp',
+            'assets/screens/mml-ss/5.webp',
+            'assets/screens/mml-ss/6.webp',
+            'assets/screens/mml-ss/7.webp',
+        ],
         links: [
             { label: '<i class="fab fa-google-play"></i> Google Play', url: 'https://play.google.com/store/apps/details?id=com.games.city.mimiland&hl=vi', cls: 'link-play' },
             { label: '<i class="fab fa-apple"></i> App Store', url: 'https://apps.apple.com/vn/app/mimiland/id1660327908', cls: 'link-apple' }
@@ -216,6 +271,7 @@ const projectData = {
         image: 'assets/the swordman.png',
         tags: ['Unity', 'C#', '3D', 'Action', 'Combat'],
         desc: 'A 3D action combat game featuring fluid sword fighting mechanics. Players master combo chains and precise timing to defeat increasingly challenging foes.',
+        screenshots: [],
         links: [
             { label: '<i class="fab fa-youtube"></i> Watch Gameplay', url: 'https://youtu.be/utRvn2S_-P8', cls: 'link-youtube' }
         ]
@@ -225,6 +281,7 @@ const projectData = {
         image: 'https://img.itch.zone/aW1hZ2UvMTQ5OTIzNC84NzM4ODExLnBuZw==/original/OMB4d0.png',
         tags: ['Unity', 'C#', '2D', 'Platformer', 'Action'],
         desc: 'A 2D action platformer with tight controls and handcrafted level design. Navigate through atmospheric environments and master movement to reach the end.',
+        screenshots: [],
         links: [
             { label: '<i class="fas fa-gamepad"></i> Play on itch.io', url: 'https://viridienne.itch.io/the-wanderer', cls: 'link-itch' }
         ]
@@ -241,6 +298,19 @@ function openProjectModal(id) {
 
     const tagsEl = document.getElementById('modal-tags');
     tagsEl.innerHTML = data.tags.map(t => `<span>${t}</span>`).join('');
+
+    const screenshotsEl = document.getElementById('modal-screenshots');
+    if (data.screenshots && data.screenshots.length > 0) {
+        screenshotsEl.innerHTML = `
+            <p class="modal-screenshots-label">// Screenshots</p>
+            <div class="modal-screenshots-strip">
+                ${data.screenshots.map(url => `<img src="${url}" alt="${data.title} screenshot" loading="lazy">`).join('')}
+            </div>`;
+        screenshotsEl.style.display = '';
+    } else {
+        screenshotsEl.innerHTML = '';
+        screenshotsEl.style.display = 'none';
+    }
 
     const linksEl = document.getElementById('modal-links');
     linksEl.innerHTML = data.links.map(l =>
