@@ -134,7 +134,7 @@ document.querySelectorAll('.section-heading').forEach(h => headingObserver.obser
 // Project Modal
 const projectData = {
     'singing-cats': {
-        title: 'The Singing Cats',
+        title: 'Duet Cats: Idle Gacha',
         image: 'https://play-lh.googleusercontent.com/eZmHx0AqsqnbvKm6uoDiigpFNGBy8x3jvp3wMdz9qXkICub-f__ednQbx01cxzlR8E5l=s248-rw',
         tags: ['Unity', 'C#', 'Music', 'Mobile'],
         desc: 'An idle gacha music game featuring adorable singing cats. Collect and evolve cats, build your band, and create harmonious melodies.',
@@ -220,7 +220,7 @@ const projectData = {
         title: 'Planet Extinction',
         image: 'https://play-lh.googleusercontent.com/GRj3HvpLB3WZIJIYCIEvWRHVPxRIH0gZEwLGdU9ijAFY8rHtXr9HTGWzkOtSiJHT7hGe=w480-h960-rw',
         tags: ['Unity', 'C#', 'Arcade', 'Shooter', 'Mobile'],
-        desc: 'A fast-paced arcade shooter where players pilot a spacecraft to defend planets from alien extinction events. Survive waves of enemies across the galaxy.',
+        desc: 'In Planet Extinction, you are neither a hero nor a villain but a being with absolute power to destroy everything. Obliterate planets across the vastness of space—just you and the planets awaiting their inevitable destruction. Explore the beauty of the cosmos before you reduce it to cosmic dust! Features complete annihilation of every planet, an ultimate arsenal of destruction including cosmic energy, devastating lasers, and massive explosions.',
         screenshots: [
             'assets/screens/pe-ss/1.webp',
             'assets/screens/pe-ss/2.webp',
@@ -235,7 +235,7 @@ const projectData = {
         title: 'Ball Destroy',
         image: 'https://play-lh.googleusercontent.com/1weDP-ODyx-k_802dQ04RkgNw1-gJQtUluZ3DMZ1_X6-1XS5L1Gz1gq-2QzYVFGxSsMO=w480-h960-rw',
         tags: ['Unity', 'C#', 'Arcade', 'Casual', 'Mobile'],
-        desc: 'A satisfying casual arcade game where players launch balls to smash and destroy blocks. Simple controls with progressively challenging level designs.',
+        desc: 'Command a legendary race of monsters wielding fire, wind, and lightning to defend the planet from a never-ending storm of meteors. Channel elemental fury—each breath has its own destructive power. Time your attacks perfectly to decimate meteors before they reach the earth.',
         screenshots: [
             'assets/screens/bd-ss/1.webp',
             'assets/screens/bd-ss/2.webp',
@@ -251,7 +251,7 @@ const projectData = {
         title: 'Mimiland',
         image: 'https://play-lh.googleusercontent.com/9WjvFonSvANwCmL2kYfrS7BICaMdArMtH67-YJJ03WyyLNbopOAPgBGD5pB9yB9zAq4=w480-h960-rw',
         tags: ['Unity', 'C#', 'Social Sim', 'Mobile'],
-        desc: 'A vibrant social simulation game where players build and decorate their own virtual city, interact with neighbors, and grow a thriving community.',
+        desc: 'An MMORPG adventure combining a rich virtual world with Vietnam\'s vibrant youth community. Explore countless mini-games and community-created content, customize cosplay avatars to transform into any character you dream of, and connect with a lively social network in a colorful virtual world.',
         screenshots: [
             'assets/screens/mml-ss/1.webp',
             'assets/screens/mml-ss/2.webp',
