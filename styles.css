@@ -275,10 +275,10 @@ nav ul li a.active {
 .hero-image-layer {
     position: absolute;
     inset: 0;
-    background-image: url('assets/YlqUVJB_opt.jpeg');
+    background-image: url('assets/ShVC42y.jpeg');
     background-size: cover;
-    background-position: center right;
-    opacity: 0.18;
+    background-position: center center;
+    opacity: 0.75;
     z-index: 1;
 }
 
@@ -303,7 +303,7 @@ nav ul li a.active {
     content: '';
     position: absolute;
     inset: 0;
-    background: radial-gradient(ellipse at center, transparent 30%, rgba(0,0,0,0.7) 100%);
+    background: radial-gradient(ellipse at center, transparent 50%, rgba(0,0,0,0.3) 100%);
     z-index: 2;
     pointer-events: none;
 }
@@ -1361,13 +1361,13 @@ nav ul li a.active {
     background: var(--surface);
     border: 1px solid rgba(255,184,0,0.3);
     border-radius: var(--radius-card);
-    padding: 0.85rem 1.1rem;
+    padding: 1.2rem 1.5rem;
     box-shadow: 0 4px 32px rgba(0,0,0,0.6), 0 0 24px rgba(255,184,0,0.08);
     opacity: 0;
     transform: translateY(12px);
     pointer-events: none;
     transition: opacity 0.4s ease, transform 0.4s ease;
-    max-width: 360px;
+    max-width: 480px;
 }
 
 .cta-float.visible {
