@@ -81,6 +81,18 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.reveal, .reveal-child').forEach(el => revealObserver.observe(el));
 
+// Lazy-load project card backgrounds
+const bgObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const bg = entry.target;
+        const src = bg.dataset.bg;
+        if (src) bg.style.backgroundImage = `url('${src}')`;
+        bgObserver.unobserve(bg);
+    });
+}, { rootMargin: '200px' });
+document.querySelectorAll('.project-bg[data-bg]').forEach(el => bgObserver.observe(el));
+
 // Section heading particle VFX
 function spawnHeadingParticles(heading) {
     const w = heading.offsetWidth;
@@ -142,7 +154,7 @@ document.querySelectorAll('.section-heading').forEach(h => headingObserver.obser
 const projectData = {
     'singing-cats': {
         title: 'Duet Cats: Idle Gacha',
-        image: 'https://play-lh.googleusercontent.com/eZmHx0AqsqnbvKm6uoDiigpFNGBy8x3jvp3wMdz9qXkICub-f__ednQbx01cxzlR8E5l=s248-rw',
+        image: 'assets/singing-cats.webp',
         tags: ['Unity', 'C#', 'Music', 'Mobile'],
         desc: 'An idle gacha music game featuring adorable singing cats. Collect and evolve cats, build your band, and create harmonious melodies.',
         screenshots: [
@@ -161,7 +173,7 @@ const projectData = {
     },
     'word-music': {
         title: 'Word Music: Puzzle Melody',
-        image: 'assets/word-music-icon.png',
+        image: 'assets/word-music-icon.webp',
         tags: ['Unity', 'C#', 'Music', 'Puzzle', 'Mobile'],
         desc: 'A musical word puzzle game where solving letter challenges unlocks melodic rewards. Blend vocabulary and rhythm in a unique mobile experience.',
         screenshots: [
@@ -176,7 +188,7 @@ const projectData = {
     },
     'hexa-block': {
         title: 'Hexa Block Away: Melody Puzzle',
-        image: 'assets/hexa-game-icon.png',
+        image: 'assets/hexa-game-icon.webp',
         tags: ['Unity', 'C#', 'Music', 'Puzzle', 'Mobile'],
         desc: 'A relaxing hexagonal block puzzle game where clearing stages unlocks musical pieces. Satisfying mechanics paired with a melodic soundtrack.',
         screenshots: [
@@ -192,7 +204,7 @@ const projectData = {
     },
     'tap-music': {
         title: 'Tap Music Gallery',
-        image: 'assets/tap-music-icon.png',
+        image: 'assets/tap-music-icon.webp',
         tags: ['Unity', 'C#', 'Music', 'Puzzle', 'Mobile'],
         desc: 'A tap-based music gallery game where players uncover artwork and melodies through rhythm-driven tapping challenges.',
         screenshots: [
@@ -208,7 +220,7 @@ const projectData = {
     },
     'heroic-defense': {
         title: 'Heroic Defense',
-        image: 'https://play-lh.googleusercontent.com/w0s401oHZno1m29gsm49Ieuj5RFyz5D5j4MqHfpzQDLlxS9RxosGk_8MpnU9-SFYkrg=w480-h960-rw',
+        image: 'assets/heroic-defense.webp',
         tags: ['Unity', 'C#', 'Tower Defense', 'Mobile'],
         desc: 'A strategic tower defense game where heroes defend against endless waves of enemies. Features hero upgrades, multiple tower types, and escalating difficulty.',
         screenshots: [
@@ -225,7 +237,7 @@ const projectData = {
     },
     'planet-extinction': {
         title: 'Planet Extinction',
-        image: 'https://play-lh.googleusercontent.com/GRj3HvpLB3WZIJIYCIEvWRHVPxRIH0gZEwLGdU9ijAFY8rHtXr9HTGWzkOtSiJHT7hGe=w480-h960-rw',
+        image: 'assets/planet-extinction.webp',
         tags: ['Unity', 'C#', 'Arcade', 'Shooter', 'Mobile'],
         desc: 'In Planet Extinction, you are neither a hero nor a villain but a being with absolute power to destroy everything. Obliterate planets across the vastness of space—just you and the planets awaiting their inevitable destruction. Explore the beauty of the cosmos before you reduce it to cosmic dust! Features complete annihilation of every planet, an ultimate arsenal of destruction including cosmic energy, devastating lasers, and massive explosions.',
         screenshots: [
@@ -240,7 +252,7 @@ const projectData = {
     },
     'ball-destroy': {
         title: 'Ball Destroy',
-        image: 'https://play-lh.googleusercontent.com/1weDP-ODyx-k_802dQ04RkgNw1-gJQtUluZ3DMZ1_X6-1XS5L1Gz1gq-2QzYVFGxSsMO=w480-h960-rw',
+        image: 'assets/ball-destroy.webp',
         tags: ['Unity', 'C#', 'Arcade', 'Casual', 'Mobile'],
         desc: 'Command a legendary race of monsters wielding fire, wind, and lightning to defend the planet from a never-ending storm of meteors. Channel elemental fury—each breath has its own destructive power. Time your attacks perfectly to decimate meteors before they reach the earth.',
         screenshots: [
@@ -256,7 +268,7 @@ const projectData = {
     },
     'mimiland': {
         title: 'Mimiland',
-        image: 'https://play-lh.googleusercontent.com/9WjvFonSvANwCmL2kYfrS7BICaMdArMtH67-YJJ03WyyLNbopOAPgBGD5pB9yB9zAq4=w480-h960-rw',
+        image: 'assets/mimiland.webp',
         tags: ['Unity', 'C#', 'Social Sim', 'Mobile'],
         desc: 'An MMORPG adventure combining a rich virtual world with Vietnam\'s vibrant youth community. Explore countless mini-games and community-created content, customize cosplay avatars to transform into any character you dream of, and connect with a lively social network in a colorful virtual world.',
         screenshots: [
@@ -275,7 +287,7 @@ const projectData = {
     },
     'the-swordman': {
         title: 'The Swordman',
-        image: 'assets/the swordman.png',
+        image: 'assets/the-swordman.webp',
         tags: ['Unity', 'C#', '3D', 'Action', 'Combat'],
         desc: 'A 3D action combat game featuring fluid sword fighting mechanics. Players master combo chains and precise timing to defeat increasingly challenging foes.',
         screenshots: [],
@@ -285,7 +297,7 @@ const projectData = {
     },
     'the-wanderer': {
         title: 'The Wanderer',
-        image: 'https://img.itch.zone/aW1hZ2UvMTQ5OTIzNC84NzM4ODExLnBuZw==/original/OMB4d0.png',
+        image: 'assets/the-wanderer.webp',
         tags: ['Unity', 'C#', '2D', 'Platformer', 'Action'],
         desc: 'A 2D action platformer with tight controls and handcrafted level design. Navigate through atmospheric environments and master movement to reach the end.',
         screenshots: [],
