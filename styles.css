@@ -1352,6 +1352,11 @@ nav ul li a.active {
     border-color: rgba(255,184,0,0.3);
 }
 
+.project-thumb-btn {
+    cursor: pointer;
+    display: inline-block;
+}
+
 .project-thumb {
     width: 48px;
     height: 48px;
