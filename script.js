@@ -289,7 +289,7 @@ const projectData = {
         title: 'The Swordman',
         image: 'assets/the-swordman.webp',
         tags: ['Unity', 'C#', '3D', 'Action', 'Combat'],
-        desc: 'A 3D action combat game featuring fluid sword fighting mechanics. Players master combo chains and precise timing to defeat increasingly challenging foes.',
+        desc: 'Personal project built for a game dev course — a 3D RPG demo where I tackled systems I\'d always wanted to build: inventory, NPC interactions, dialog system, a safe hub area, combat, and a boss fight. My first full attempt at an RPG foundation in Unity.',
         screenshots: [],
         links: [
             { label: '<i class="fab fa-youtube"></i> Watch Gameplay', url: 'https://youtu.be/utRvn2S_-P8', cls: 'link-youtube' }
@@ -299,7 +299,7 @@ const projectData = {
         title: 'The Wanderer',
         image: 'assets/the-wanderer.webp',
         tags: ['Unity', 'C#', '2D', 'Platformer', 'Action'],
-        desc: 'A 2D action platformer with tight controls and handcrafted level design. Navigate through atmospheric environments and master movement to reach the end.',
+        desc: 'Personal project for a game dev course — a 2D platformer with NPC interactions, dialog system, enemy encounters, combo-chain combat, and a boss fight. Built to push further than The Swordman into a complete side-scrolling action experience.',
         screenshots: [],
         links: [
             { label: '<i class="fas fa-gamepad"></i> Play on itch.io', url: 'https://viridienne.itch.io/the-wanderer', cls: 'link-itch' }

@@ -930,6 +930,7 @@ nav ul li a.active {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 260px 260px 200px;
+    grid-auto-rows: 200px;
     gap: 3px;
 }
 
