@@ -307,6 +307,16 @@ const projectData = {
     }
 };
 
+// Prefetch images on card hover so modal opens instantly
+document.querySelectorAll('.project-card[data-project]').forEach(card => {
+    card.addEventListener('mouseenter', () => {
+        const data = projectData[card.dataset.project];
+        if (!data) return;
+        new Image().src = data.image;
+        (data.screenshots || []).forEach(url => new Image().src = url);
+    }, { once: true });
+});
+
 const _modal        = document.getElementById('project-modal');
 const _modalImage   = document.getElementById('modal-image');
 const _modalTitle   = document.getElementById('modal-title');
@@ -319,19 +329,50 @@ function openProjectModal(id) {
     const data = projectData[id];
     if (!data) return;
 
-    _modalImage.style.backgroundImage = `url('${data.image}')`;
+    // Hero image: show shimmer skeleton, swap in once loaded
+    _modalImage.style.backgroundImage = '';
+    const heroImg = new Image();
+    heroImg.src = data.image;
+    if (heroImg.complete) {
+        _modalImage.style.backgroundImage = `url('${data.image}')`;
+        _modalImage.classList.remove('loading');
+    } else {
+        _modalImage.classList.add('loading');
+        heroImg.onload = () => {
+            _modalImage.style.backgroundImage = `url('${data.image}')`;
+            _modalImage.classList.remove('loading');
+        };
+    }
+
     _modalTitle.textContent = data.title;
     _modalDesc.textContent = data.desc;
-
     _modalTags.innerHTML = data.tags.map(t => `<span>${t}</span>`).join('');
 
     if (data.screenshots && data.screenshots.length > 0) {
-        _modalScreens.innerHTML = `
-            <p class="modal-screenshots-label">// Screenshots</p>
-            <div class="modal-screenshots-strip">
-                ${data.screenshots.map(url => `<img src="${url}" alt="${data.title} screenshot" loading="lazy">`).join('')}
-            </div>`;
+        // Render skeleton placeholders, swap each out as its image loads
+        const strip = document.createElement('div');
+        strip.className = 'modal-screenshots-strip';
+        const skeletons = data.screenshots.map(() => {
+            const s = document.createElement('div');
+            s.className = 'screenshot-skeleton';
+            return s;
+        });
+        skeletons.forEach(s => strip.appendChild(s));
+
+        _modalScreens.innerHTML = '<p class="modal-screenshots-label">// Screenshots</p>';
+        _modalScreens.appendChild(strip);
         _modalScreens.style.display = '';
+
+        data.screenshots.forEach((url, i) => {
+            const img = new Image();
+            img.alt = `${data.title} screenshot`;
+            img.src = url;
+            const swap = () => {
+                if (skeletons[i].parentNode === strip) strip.replaceChild(img, skeletons[i]);
+                requestAnimationFrame(() => requestAnimationFrame(() => img.classList.add('loaded')));
+            };
+            if (img.complete) { swap(); } else { img.onload = swap; }
+        });
     } else {
         _modalScreens.innerHTML = '';
         _modalScreens.style.display = 'none';

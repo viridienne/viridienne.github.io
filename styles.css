@@ -1760,6 +1760,10 @@ footer {
 /* =====================
    PROJECT MODAL
    ===================== */
+@keyframes modalShimmer {
+    0%   { background-position: -600px 0; }
+    100% { background-position: 600px 0; }
+}
 .project-modal-overlay {
     display: none;
     position: fixed;
@@ -1822,6 +1826,23 @@ footer {
     background-position: center;
     background-color: #0a0a0a;
     border-bottom: 1px solid var(--border);
+    transition: opacity 0.25s;
+}
+.modal-image.loading {
+    background-image: none !important;
+    background: linear-gradient(90deg, #111 25%, #222 50%, #111 75%);
+    background-size: 600px 100%;
+    animation: modalShimmer 1.4s infinite linear;
+    opacity: 1;
+}
+.screenshot-skeleton {
+    height: 220px;
+    width: 130px;
+    flex-shrink: 0;
+    border-radius: 2px;
+    background: linear-gradient(90deg, #111 25%, #222 50%, #111 75%);
+    background-size: 600px 100%;
+    animation: modalShimmer 1.4s infinite linear;
 }
 
 .modal-body {
@@ -1908,8 +1929,12 @@ footer {
     border-radius: 2px;
     scroll-snap-align: start;
     flex-shrink: 0;
-    transition: border-color 0.2s;
+    transition: border-color 0.2s, opacity 0.3s;
     display: block;
+    opacity: 0;
+}
+.modal-screenshots-strip img.loaded {
+    opacity: 1;
 }
 
 .modal-screenshots-strip img:hover {
